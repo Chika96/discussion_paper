@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="presentation" version="2.8.10" schema-version="v2.1.5" flavor="ogc">
+<bibdata type="standard">
+<title language="en" type="main">Building an Ecosystem for theDevelopment, Utilization, and Open Data of 3D City Mofels Based on CityGML: Sharing Insights</title>
+<docidentifier type="ogc-external">http://www.opengis.net/doc/PER/t12-A063</docidentifier><docidentifier type="ogc-internal" primary="true">25-032</docidentifier><docnumber>25-032</docnumber><date type="published"><on>2017-01-23</on></date><date type="issued"><on>2017-06-29</on></date><date type="received"><on>2017-06-29</on></date><contributor><role type="editor"/><person>
+<name><completename>Nobuhiro Ishimaru</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Thomas H. Kolbe</completename></name>
+</person></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>Open Geospatial Consortium</name>
+<subdivision type="Committee">
+<name>technical</name>
+</subdivision><abbreviation>OGC</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
+<name>Open Geospatial Consortium</name>
+<abbreviation>OGC</abbreviation></organization></contributor><language current="true">en</language><script current="true">Latn</script><status><stage language="">published</stage><stage language="en">Published</stage></status><copyright><from>2017</from><owner><organization>
+<name>Open Geospatial Consortium</name>
+<abbreviation>OGC</abbreviation></organization></owner></copyright><ext><doctype>discussion-paper</doctype><flavor>ogc</flavor></ext></bibdata><localized-strings><localized-string key="scope" language="en">Scope</localized-string><localized-string key="symbolsabbrev" language="en">Symbols and abbreviated terms</localized-string><localized-string key="abbrev" language="en">Abbreviated terms</localized-string><localized-string key="symbols" language="en">Symbols</localized-string><localized-string key="table_of_contents" language="en">Contents</localized-string><localized-string key="introduction" language="en">Introduction</localized-string><localized-string key="foreword" language="en">Preface</localized-string><localized-string key="abstract" language="en">Abstract</localized-string><localized-string key="acknowledgements" language="en">Acknowledgements</localized-string><localized-string key="executivesummary" language="en">Executive summary</localized-string><localized-string key="termsdef" language="en">Terms and definitions</localized-string><localized-string key="termsdefsymbolsabbrev" language="en">Terms, definitions, symbols and abbreviated terms</localized-string><localized-string key="termsdefsymbols" language="en">Terms, definitions and symbols</localized-string><localized-string key="termsdefabbrev" language="en">Terms, definitions and abbreviated terms</localized-string><localized-string key="normref" language="en">Normative references</localized-string><localized-string key="bibliography" language="en">Bibliography</localized-string><localized-string key="index" language="en">Index</localized-string><localized-string key="see" language="en">see</localized-string><localized-string key="see_also" language="en">see also</localized-string><localized-string key="preface" language="en">Preface</localized-string><localized-string key="section" language="en">Section</localized-string><localized-string key="clause" language="en">Clause</localized-string><localized-string key="annex" language="en">Annex</localized-string><localized-string key="appendix" language="en">Appendix</localized-string><localized-string key="continued" language="en">continued</localized-string><localized-string key="no_terms_boilerplate" language="en">No terms and definitions are listed in this document.
+</localized-string><localized-string key="internal_terms_boilerplate" language="en">This document uses the terms defined in https://portal.ogc.org/public_ogc/directives/directives.php[OGC Policy Directive 49], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.
+
+This document also uses terms defined in the OGC Standard for Modular specifications (https://portal.opengeospatial.org/files/?artifact_id=34762[OGC 08-131r3]), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.
+
+For the purposes of this document, the following additional terms and definitions apply.
+</localized-string><localized-string key="norm_with_refs_pref" language="en">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</localized-string><localized-string key="norm_empty_pref" language="en">There are no normative references in this document.</localized-string><localized-string key="external_terms_boilerplate" language="en">This document uses the terms defined in https://portal.ogc.org/public_ogc/directives/directives.php[OGC Policy Directive 49], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.
+
+This document also uses terms defined in the OGC Standard for Modular specifications (https://portal.opengeospatial.org/files/?artifact_id=34762[OGC 08-131r3]), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.
+
+For the purposes of this document, the terms and definitions given in % additionally apply.
+</localized-string><localized-string key="internal_external_terms_boilerplate" language="en">This document uses the terms defined in https://portal.ogc.org/public_ogc/directives/directives.php[OGC Policy Directive 49], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.
+
+This document also uses terms defined in the OGC Standard for Modular specifications (https://portal.opengeospatial.org/files/?artifact_id=34762[OGC 08-131r3]), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.
+
+For the purposes of this document, the terms and definitions given in % and the following additionally apply.
+</localized-string><localized-string key="no_information_available" language="en">[NO INFORMATION AVAILABLE]</localized-string><localized-string key="term_defined_in" language="en">(%)</localized-string><localized-string key="binary_and" language="en">%1 <conn>and</conn> %2</localized-string><localized-string key="multiple_and" language="en">%1<enum-comma>,</enum-comma> <conn>and</conn> %2</localized-string><localized-string key="binary_or" language="en">%1 <conn>or</conn> %2</localized-string><localized-string key="multiple_or" language="en">%1<enum-comma>,</enum-comma> <conn>or</conn> %2</localized-string><localized-string key="chain_and" language="en">%1 <conn>and</conn> %2</localized-string><localized-string key="chain_or" language="en">%1 <conn>or</conn> %2</localized-string><localized-string key="chain_from" language="en">%1 <conn>from</conn> %2</localized-string><localized-string key="chain_to" language="en">%1 <conn>to</conn> %2</localized-string><localized-string key="nested_xref" language="en">%1<comma>,</comma> %2</localized-string><localized-string key="list_nested_xref" language="en">%1 %2</localized-string><localized-string key="SpelloutRules" language="en">spellout-ordinal</localized-string><localized-string key="OrdinalRules" language="en">digits-ordinal</localized-string><localized-string key="note" language="en">NOTE</localized-string><localized-string key="note_xref" language="en">Note</localized-string><localized-string key="termnote" language="en">Note % to entry</localized-string><localized-string key="list" language="en">List</localized-string><localized-string key="deflist" language="en">Definition List</localized-string><localized-string key="figure" language="en">Figure</localized-string><localized-string key="diagram" language="en">Diagram</localized-string><localized-string key="formula" language="en">Formula</localized-string><localized-string key="inequality" language="en">Formula</localized-string><localized-string key="table" language="en">Table</localized-string><localized-string key="requirement" language="en">Requirement</localized-string><localized-string key="recommendation" language="en">Recommendation</localized-string><localized-string key="permission" language="en">Permission</localized-string><localized-string key="box" language="en">Box</localized-string><localized-string key="no_identifier" language="en">(NO ID)</localized-string><localized-string key="recommendationtest" language="en">Recommendation test</localized-string><localized-string key="requirementtest" language="en">Requirement test</localized-string><localized-string key="permissiontest" language="en">Permission test</localized-string><localized-string key="recommendationclass" language="en">Recommendations class</localized-string><localized-string key="requirementclass" language="en">Requirements class</localized-string><localized-string key="permissionclass" language="en">Permissions class</localized-string><localized-string key="abstracttest" language="en">Abstract test</localized-string><localized-string key="conformanceclass" language="en">Conformance class</localized-string><localized-string key="key" language="en">Key</localized-string><localized-string key="example" language="en">Example</localized-string><localized-string key="example_xref" language="en">Example</localized-string><localized-string key="where" language="en">where</localized-string><localized-string key="where_one" language="en">where</localized-string><localized-string key="wholeoftext" language="en">Whole of text</localized-string><localized-string key="draft_label" language="en">draft</localized-string><localized-string key="inform_annex" language="en">informative</localized-string><localized-string key="norm_annex" language="en">normative</localized-string><localized-string key="modified" language="en">modified</localized-string><localized-string key="adapted" language="en">adapted</localized-string><localized-string key="deprecated" language="en">DEPRECATED</localized-string><localized-string key="source" language="en">SOURCE</localized-string><localized-string key="and" language="en">and</localized-string><localized-string key="all_parts" language="en">All Parts</localized-string><localized-string key="edition_ordinal" language="en">{{ var1 | ordinal_word: '', '' }} edition</localized-string><localized-string key="edition" language="en">edition</localized-string><localized-string key="version" language="en">version</localized-string><localized-string key="toc_figures" language="en">List of Figures</localized-string><localized-string key="toc_tables" language="en">List of Tables</localized-string><localized-string key="toc_recommendations" language="en">List of Normative Statements</localized-string><localized-string key="month_january" language="en">January</localized-string><localized-string key="month_february" language="en">February</localized-string><localized-string key="month_march" language="en">March</localized-string><localized-string key="month_april" language="en">April</localized-string><localized-string key="month_may" language="en">May</localized-string><localized-string key="month_june" language="en">June</localized-string><localized-string key="month_july" language="en">July</localized-string><localized-string key="month_august" language="en">August</localized-string><localized-string key="month_september" language="en">September</localized-string><localized-string key="month_october" language="en">October</localized-string><localized-string key="month_november" language="en">November</localized-string><localized-string key="month_december" language="en">December</localized-string><localized-string key="obligation" language="en">Obligation</localized-string><localized-string key="admonition.danger" language="en">Danger</localized-string><localized-string key="admonition.warning" language="en">Warning</localized-string><localized-string key="admonition.caution" language="en">Caution</localized-string><localized-string key="admonition.important" language="en">Important</localized-string><localized-string key="admonition.safety_precautions" language="en">Safety Precautions</localized-string><localized-string key="admonition.editorial" language="en">Editorial Note</localized-string><localized-string key="locality.section" language="en">Section</localized-string><localized-string key="locality.clause" language="en">Clause</localized-string><localized-string key="locality.part" language="en">Part</localized-string><localized-string key="locality.paragraph" language="en">Paragraph</localized-string><localized-string key="locality.chapter" language="en">Chapter</localized-string><localized-string key="locality.page" language="en">Page</localized-string><localized-string key="locality.table" language="en">Table</localized-string><localized-string key="locality.annex" language="en">Annex</localized-string><localized-string key="locality.figure" language="en">Figure</localized-string><localized-string key="locality.example" language="en">Example</localized-string><localized-string key="locality.note" language="en">Note</localized-string><localized-string key="locality.formula" language="en">Formula</localized-string><localized-string key="grammar_abbrevs.masculine" language="en">m</localized-string><localized-string key="grammar_abbrevs.feminine" language="en">f</localized-string><localized-string key="grammar_abbrevs.neuter" language="en">n</localized-string><localized-string key="grammar_abbrevs.common" language="en">common</localized-string><localized-string key="grammar_abbrevs.singular" language="en">sg</localized-string><localized-string key="grammar_abbrevs.dual" language="en">dual</localized-string><localized-string key="grammar_abbrevs.pl" language="en">pl</localized-string><localized-string key="grammar_abbrevs.isPreposition" language="en">prep</localized-string><localized-string key="grammar_abbrevs.isParticiple" language="en">part</localized-string><localized-string key="grammar_abbrevs.isAdjective" language="en">adj</localized-string><localized-string key="grammar_abbrevs.isAdverb" language="en">adv</localized-string><localized-string key="grammar_abbrevs.isNoun" language="en">noun</localized-string><localized-string key="grammar_abbrevs.isVerb" language="en">verb</localized-string><localized-string key="relatedterms.deprecates" language="en">deprecates</localized-string><localized-string key="relatedterms.supersedes" language="en">supersedes</localized-string><localized-string key="relatedterms.narrower" language="en">narrower</localized-string><localized-string key="relatedterms.broader" language="en">broader</localized-string><localized-string key="relatedterms.equivalent" language="en">equivalent</localized-string><localized-string key="relatedterms.compare" language="en">compare</localized-string><localized-string key="relatedterms.contrast" language="en">contrast</localized-string><localized-string key="relatedterms.see" language="en">see</localized-string><localized-string key="relatedterms.seealso" language="en">see also</localized-string><localized-string key="Clause.sg" language="en">Clause</localized-string><localized-string key="Clause.pl" language="en">Clauses</localized-string><localized-string key="Annex.sg" language="en">Annex</localized-string><localized-string key="Annex.pl" language="en">Annexes</localized-string><localized-string key="Appendix.sg" language="en">Appendix</localized-string><localized-string key="Appendix.pl" language="en">Appendixes</localized-string><localized-string key="Note.sg" language="en">Note</localized-string><localized-string key="Note.pl" language="en">Notes</localized-string><localized-string key="Note_%_to_entry.sg" language="en">Note % to entry</localized-string><localized-string key="Note_%_to_entry.pl" language="en">Notes % to entry</localized-string><localized-string key="List.sg" language="en">List</localized-string><localized-string key="List.pl" language="en">Lists</localized-string><localized-string key="Figure.sg" language="en">Figure</localized-string><localized-string key="Figure.pl" language="en">Figures</localized-string><localized-string key="Formula.sg" language="en">Formula</localized-string><localized-string key="Formula.pl" language="en">Formulas</localized-string><localized-string key="Table.sg" language="en">Table</localized-string><localized-string key="Table.pl" language="en">Tables</localized-string><localized-string key="Requirement.sg" language="en">Requirement</localized-string><localized-string key="Requirement.pl" language="en">Requirements</localized-string><localized-string key="Recommendation.sg" language="en">Recommendation</localized-string><localized-string key="Recommendation.pl" language="en">Recommendations</localized-string><localized-string key="Permission.sg" language="en">Permission</localized-string><localized-string key="Permission.pl" language="en">Permissions</localized-string><localized-string key="Example.sg" language="en">Example</localized-string><localized-string key="Example.pl" language="en">Examples</localized-string><localized-string key="Part.sg" language="en">Part</localized-string><localized-string key="Part.pl" language="en">Parts</localized-string><localized-string key="Section.sg" language="en">Section</localized-string><localized-string key="Section.pl" language="en">Sections</localized-string><localized-string key="Paragraph.sg" language="en">Paragraph</localized-string><localized-string key="Paragraph.pl" language="en">Paragraphs</localized-string><localized-string key="Chapter.sg" language="en">Chapter</localized-string><localized-string key="Chapter.pl" language="en">Chapters</localized-string><localized-string key="Page.sg" language="en">Page</localized-string><localized-string key="Page.pl" language="en">Pages</localized-string><localized-string key="punct.colon" language="en">:</localized-string><localized-string key="punct.comma" language="en">,</localized-string><localized-string key="punct.enum-comma" language="en">,</localized-string><localized-string key="punct.semicolon" language="en">;</localized-string><localized-string key="punct.period" language="en">.</localized-string><localized-string key="punct.close-paren" language="en">)</localized-string><localized-string key="punct.open-paren" language="en">(</localized-string><localized-string key="punct.close-bracket" language="en">]</localized-string><localized-string key="punct.open-bracket" language="en">[</localized-string><localized-string key="punct.question-mark" language="en">?</localized-string><localized-string key="punct.exclamation-mark" language="en">!</localized-string><localized-string key="punct.em-dash" language="en">—</localized-string><localized-string key="punct.en-dash" language="en">–</localized-string><localized-string key="punct.number-en-dash" language="en">–</localized-string><localized-string key="punct.open-quote" language="en">“</localized-string><localized-string key="punct.close-quote" language="en">”</localized-string><localized-string key="punct.open-nested-quote" language="en">‘</localized-string><localized-string key="punct.close-nested-quote" language="en">’</localized-string><localized-string key="punct.ellipse" language="en">…</localized-string><localized-string key="admitted" language="en">ALTERNATIVE</localized-string><localized-string key="submitters" language="en">Submitters</localized-string><localized-string key="contributors_clause" language="en">Contributors</localized-string><localized-string key="dochistory" language="en">Revision history</localized-string><localized-string key="sourcecode" language="en">Listing</localized-string><localized-string key="table_of_figures" language="en">Table of Figures</localized-string><localized-string key="security_empty" language="en">No security considerations have been made for this document.</localized-string><localized-string key="submission_date" language="en">Submission Date</localized-string><localized-string key="approval_date" language="en">Approval Date</localized-string><localized-string key="publication_date" language="en">Publication Date</localized-string><localized-string key="author" language="en">Author</localized-string><localized-string key="editor_full" language="en">Editor</localized-string><localized-string key="contributor" language="en">Contributor</localized-string><localized-string key="stage_dict.draft" language="en">Draft</localized-string><localized-string key="stage_dict.work-item-draft" language="en">Work Item Draft</localized-string><localized-string key="stage_dict.swg-draft" language="en">Candidate SWG Draft</localized-string><localized-string key="stage_dict.oab-review" language="en">Candidate OAB Review Draft</localized-string><localized-string key="stage_dict.public-rfc" language="en">Candidate Public RFC Draft</localized-string><localized-string key="stage_dict.tc-vote" language="en">Candidate TC Vote Draft</localized-string><localized-string key="stage_dict.approved" language="en">Approved</localized-string><localized-string key="stage_dict.published" language="en">Published</localized-string><localized-string key="stage_dict.deprecated" language="en">Deprecated</localized-string><localized-string key="stage_dict.rescinded" language="en">Rescinded</localized-string><localized-string key="stage_dict.retired" language="en">Retired</localized-string><localized-string key="language" language="en">en</localized-string><localized-string key="script" language="en">Latn</localized-string></localized-strings><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<presentation-metadata><name>document-scheme</name><value>2018</value></presentation-metadata><presentation-metadata><name>color-admonition-caution</name><value>rgb(79, 129, 189)</value></presentation-metadata><presentation-metadata><name>color-admonition-editor</name><value>rgb(79, 129, 189)</value></presentation-metadata><presentation-metadata><name>color-admonition-important</name><value>rgb(79, 129, 189)</value></presentation-metadata><presentation-metadata><name>color-admonition-note</name><value>rgb(79, 129, 189)</value></presentation-metadata><presentation-metadata><name>color-admonition-safety-precaution</name><value>rgb(79, 129, 189)</value></presentation-metadata><presentation-metadata><name>color-admonition-tip</name><value>rgb(79, 129, 189)</value></presentation-metadata><presentation-metadata><name>color-admonition-todo</name><value>rgb(79, 129, 189)</value></presentation-metadata><presentation-metadata><name>color-admonition-warning</name><value>rgb(79, 129, 189)</value></presentation-metadata><presentation-metadata><name>color-background-definition-description</name><value>rgb(242, 251, 255)</value></presentation-metadata><presentation-metadata><name>color-background-definition-term</name><value>rgb(215, 243, 255)</value></presentation-metadata><presentation-metadata><name>color-background-page</name><value>rgb(33, 55, 92)</value></presentation-metadata><presentation-metadata><name>color-background-table-header</name><value>rgb(33, 55, 92)</value></presentation-metadata><presentation-metadata><name>color-background-table-row-even</name><value>rgb(252, 246, 222)</value></presentation-metadata><presentation-metadata><name>color-background-table-row-odd</name><value>rgb(254, 252, 245)</value></presentation-metadata><presentation-metadata><name>color-background-term-admitted-label</name><value>rgb(223, 236, 249)</value></presentation-metadata><presentation-metadata><name>color-background-term-deprecated-label</name><value>rgb(237, 237, 238)</value></presentation-metadata><presentation-metadata><name>color-background-term-preferred-label</name><value>rgb(249, 235, 187)</value></presentation-metadata><presentation-metadata><name>color-background-text-label-legacy</name><value>rgb(33, 60, 107)</value></presentation-metadata><presentation-metadata><name>color-secondary-shade-1</name><value>rgb(237, 193, 35)</value></presentation-metadata><presentation-metadata><name>color-secondary-shade-2</name><value>rgb(246, 223, 140)</value></presentation-metadata><presentation-metadata><name>color-text</name><value>rgb(88, 89, 91)</value></presentation-metadata><presentation-metadata><name>color-text-title</name><value>rgb(33, 55, 92)</value></presentation-metadata><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata><source-highlighter-css>sourcecode table td { padding: 5px; }
+sourcecode table pre { margin: 0; }
+sourcecode, sourcecode .w {
+  color: #444444;
+}
+sourcecode .cp {
+  color: #CC00A3;
+}
+sourcecode .cs {
+  color: #CC00A3;
+}
+sourcecode .c, sourcecode .ch, sourcecode .cd, sourcecode .cm, sourcecode .cpf, sourcecode .c1 {
+  color: #1E90FF;
+}
+sourcecode .kc {
+  color: #C34E00;
+}
+sourcecode .kd {
+  color: #0000FF;
+}
+sourcecode .kr {
+  color: #007575;
+}
+sourcecode .k, sourcecode .kn, sourcecode .kp, sourcecode .kt, sourcecode .kv {
+  color: #0000FF;
+}
+sourcecode .s, sourcecode .sb, sourcecode .sc, sourcecode .ld, sourcecode .sd, sourcecode .s2, sourcecode .se, sourcecode .sh, sourcecode .si, sourcecode .sx, sourcecode .sr, sourcecode .s1, sourcecode .ss {
+  color: #009C00;
+}
+sourcecode .sa {
+  color: #0000FF;
+}
+sourcecode .nb, sourcecode .bp {
+  color: #C34E00;
+}
+sourcecode .nt {
+  color: #0000FF;
+}
+</source-highlighter-css></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_f4afa8d0-0c3d-9899-c32e-e38b2aa1e71c" obligation="normative" semx-id="_f4afa8d0-0c3d-9899-c32e-e38b2aa1e71c">
+<title id="_43b54bc3-f75e-8bd3-105e-2d36faf9d84a" semx-id="_19604a82-a482-3c87-1356-705ef7b11f09">Copyright notice</title><fmt-title depth="1" id="_3f220e08-5d5c-0b52-e4ef-0bb4f39f2aaf"><semx element="title" source="_43b54bc3-f75e-8bd3-105e-2d36faf9d84a">Copyright notice</semx></fmt-title>
+<p id="_55e37595-5ffa-86a1-7f55-5ceca8f060f5" align="center" semx-id="_55e37595-5ffa-86a1-7f55-5ceca8f060f5">Copyright © 2017 Open Geospatial Consortium<br/> To obtain additional rights of use, visit<link target="https://www.ogc.org/legal" id="_d0975f32-cda8-2d9d-d661-a69c8dea3b0e"/><semx element="link" source="_d0975f32-cda8-2d9d-d661-a69c8dea3b0e"><fmt-link target="https://www.ogc.org/legal"/></semx></p>
+</clause>
+
+<clause id="_6908548e-204b-56e7-9062-6924cccf2315" obligation="normative" semx-id="_6908548e-204b-56e7-9062-6924cccf2315">
+<title id="_fc7d3dc9-fba1-ac60-7a28-795cd04fc8da" semx-id="_db83e2f6-5841-eaeb-0d35-1277ee9d3f6a">Note</title><fmt-title depth="1" id="_5c97b0d2-00d9-70a5-30e8-79241ff430f1"><semx element="title" source="_fc7d3dc9-fba1-ac60-7a28-795cd04fc8da">Note</semx></fmt-title>
+<p id="_e1d5d5c4-54c3-2761-be2c-22547f01c057" align="left" semx-id="_e1d5d5c4-54c3-2761-be2c-22547f01c057">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+<p id="_02892e94-7b43-630a-129c-d2e0f75ff92b" align="left" semx-id="_02892e94-7b43-630a-129c-d2e0f75ff92b">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+</clause>
+</copyright-statement>
+
+<license-statement>
+
+<clause id="_45f6bdf5-80f3-f775-9740-2adafc90b1f7" obligation="normative" semx-id="_45f6bdf5-80f3-f775-9740-2adafc90b1f7">
+<title id="_cfbd3e37-2447-e167-a5c6-c22d2e02f7d8" semx-id="_3788828e-41fb-3895-6acc-52071643abed">License Agreement</title><fmt-title depth="1" id="_c3962c50-1c63-6f5a-5a8c-a3055acc8d9d"><semx element="title" source="_cfbd3e37-2447-e167-a5c6-c22d2e02f7d8">License Agreement</semx></fmt-title>
+<p id="_772872dd-928c-666f-92c5-676f7f5d3071" semx-id="_772872dd-928c-666f-92c5-676f7f5d3071">Use of this document is subject to the license agreement at <link target="https://www.ogc.org/license" id="_5f2ce0a9-fe6f-0280-8849-4352caa82c70"/><semx element="link" source="_5f2ce0a9-fe6f-0280-8849-4352caa82c70"><fmt-link target="https://www.ogc.org/license"/></semx></p>
+</clause>
+</license-statement>
+
+<legal-statement>
+
+<clause id="_2c40f2fd-0186-5726-7647-8808a5212206" obligation="normative" semx-id="_2c40f2fd-0186-5726-7647-8808a5212206">
+<title id="_1181feac-36dc-1167-cbc9-55c4cfc8684c" semx-id="_37bc7c72-0d8f-ba1e-c43f-647a0e7edf21">Notice</title><fmt-title depth="1" id="_bae7e45b-898f-00c6-4ace-3cf803be915b"><semx element="title" source="_1181feac-36dc-1167-cbc9-55c4cfc8684c">Notice</semx></fmt-title>
+<p id="_851f78b5-795f-e2cd-9ae0-d6206c1c466e" semx-id="_851f78b5-795f-e2cd-9ae0-d6206c1c466e">This document is not an OGC Standard. This document is an OGC Discussion Paper and is therefore not an official position of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
+
+<p id="_8bc2066f-9731-0984-c14e-beafdd968641" semx-id="_8bc2066f-9731-0984-c14e-beafdd968641">Further, an OGC Discussion Paper should not be referenced as required or mandatory technology in procurements.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+</feedback-statement>
+</boilerplate><preface><clause type="toc" id="_13d7055e-30fc-845a-c60e-8972faf092d9" displayorder="1"><fmt-title depth="1" id="_b7371af6-75a1-52fa-2891-5c5f9a06aa7c">Contents</fmt-title></clause>
+<clause type="security" id="_089bc373-1e6c-a75e-d8b1-b1720c114978" obligation="informative" semx-id="_089bc373-1e6c-a75e-d8b1-b1720c114978" displayorder="2">
+  <title id="_623042c6-6a1f-e030-001b-8fd150502029" semx-id="_60116174-1b43-daee-f58d-8e252cc20bc6">Security considerations</title><fmt-title depth="1" id="_f6f5036d-e898-9ef2-ec92-eaadcaff5fa1"><span class="fmt-caption-label"><semx element="autonum" source="_089bc373-1e6c-a75e-d8b1-b1720c114978">I</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_623042c6-6a1f-e030-001b-8fd150502029">Security considerations</semx></fmt-title><fmt-xref-label><semx element="title" source="_089bc373-1e6c-a75e-d8b1-b1720c114978">Security considerations</semx></fmt-xref-label>
+  <p id="_d26f814c-843b-f750-2e51-48d0e8ac1142" semx-id="_d26f814c-843b-f750-2e51-48d0e8ac1142">No security considerations have been made for this document.</p></clause><clause id="_80d27853-5298-bcfb-c961-b63d99fbe995" obligation="informative" semx-id="_80d27853-5298-bcfb-c961-b63d99fbe995" displayorder="3">
+<title id="_16dfa240-5da0-7fab-88e4-5f6086712be3" semx-id="_2467550d-f488-7e76-aa48-54ef263fca4f">Introduction</title><fmt-title depth="1" id="_4a87033d-5402-e416-e075-d46e59bc272d"><span class="fmt-caption-label"><semx element="autonum" source="_80d27853-5298-bcfb-c961-b63d99fbe995">II</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_16dfa240-5da0-7fab-88e4-5f6086712be3">Introduction</semx></fmt-title><fmt-xref-label><semx element="title" source="_80d27853-5298-bcfb-c961-b63d99fbe995">Introduction</semx></fmt-xref-label>
+<p id="_33de1080-6ee6-e43c-2775-125e519e1455" semx-id="_33de1080-6ee6-e43c-2775-125e519e1455">Introduction content.</p>
+</clause><clause id="_bd39150f-3872-9216-f143-ba98163b0067" obligation="informative" semx-id="_bd39150f-3872-9216-f143-ba98163b0067" displayorder="4">
+<title id="_1680d380-6932-3e39-5492-77beeb43192b" semx-id="_333a1e74-9a5c-c0f9-b4e0-aff8b32737c8">Other sections</title><fmt-title depth="1" id="_15bd018d-8d97-a4a7-b2ec-b985a2b3a701"><span class="fmt-caption-label"><semx element="autonum" source="_bd39150f-3872-9216-f143-ba98163b0067">III</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_1680d380-6932-3e39-5492-77beeb43192b">Other sections</semx></fmt-title><fmt-xref-label><semx element="title" source="_bd39150f-3872-9216-f143-ba98163b0067">Other sections</semx></fmt-xref-label>
+<p id="_8e113ce3-8db1-6c1d-8430-94a6ef6d996e" semx-id="_8e113ce3-8db1-6c1d-8430-94a6ef6d996e">Other section content.</p>
+</clause>
+</preface><sections>
+
+
+
+
+<references id="_844cb0e6-2b9b-d05c-730f-ff195313e1cf" normative="true" obligation="informative" semx-id="_844cb0e6-2b9b-d05c-730f-ff195313e1cf" displayorder="5">
+<title id="_fe51d4c3-38af-5145-28d3-a0977d6bbab6" semx-id="_461cd77a-5cfe-f57e-70ab-04e5c4142c2b">Normative references</title><fmt-title depth="1" id="_55449977-60cd-3920-49e0-2833c3e5f0fc"><span class="fmt-caption-label"><semx element="autonum" source="_844cb0e6-2b9b-d05c-730f-ff195313e1cf">1</semx><span class="fmt-autonum-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_fe51d4c3-38af-5145-28d3-a0977d6bbab6">Normative references</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_844cb0e6-2b9b-d05c-730f-ff195313e1cf">1</semx></fmt-xref-label><p id="_5b9c8800-9c39-ebed-6a54-682232e7d6fd" semx-id="_5b9c8800-9c39-ebed-6a54-682232e7d6fd">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+
+<bibitem anchor="openapi" id="openapi" semx-id="_99d55a8d-fd02-9bab-1825-e23a403fbcaa"><biblio-tag/><formattedref format="application/x-isodoc+xml">Open API Initiative: <strong>OpenAPI Specification 3.0.2</strong>, 2018 <link target="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md" id="_03f03fc5-a9ca-f14d-9352-c1671474110a"/><semx element="link" source="_03f03fc5-a9ca-f14d-9352-c1671474110a"><fmt-link target="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md"/></semx></formattedref><docidentifier>Open API Initiative</docidentifier><docidentifier scope="biblio-tag">Open API Initiative</docidentifier><language>en</language><script>Latn</script></bibitem>
+<bibitem anchor="gmlsf" id="gmlsf" semx-id="_5166e8f3-3740-6025-3ca3-75269fd24b12"><biblio-tag/><formattedref format="application/x-isodoc+xml">van den Brink, L., Portele, C., Vretanos, P.: OGC 10-100r3, <strong>Geography Markup Language (GML) Simple Features Profile</strong>, 2012 <link target="http://portal.opengeospatial.org/files/?artifact_id=42729" id="_1e742709-d238-7b4e-6ab3-05a303d06bd2"/><semx element="link" source="_1e742709-d238-7b4e-6ab3-05a303d06bd2"><fmt-link target="http://portal.opengeospatial.org/files/?artifact_id=42729"/></semx></formattedref><docidentifier>GMLSF</docidentifier><docidentifier scope="biblio-tag">GMLSF</docidentifier><language>en</language><script>Latn</script></bibitem>
+<bibitem anchor="html5" id="html5" semx-id="_d38e24e6-e72b-f593-8dba-025c01af2773"><biblio-tag/><formattedref format="application/x-isodoc+xml">W3C: <strong>HTML5</strong>, W3C Recommendation, 2019 <link target="http://www.w3.org/TR/html5/" id="_f732ad62-4de2-2fd3-8446-801e95770616"/><semx element="link" source="_f732ad62-4de2-2fd3-8446-801e95770616"><fmt-link target="http://www.w3.org/TR/html5/"/></semx></formattedref><docidentifier>HTML5</docidentifier><docidentifier scope="biblio-tag">HTML5</docidentifier><docnumber>5</docnumber><language>en</language><script>Latn</script></bibitem>
+<bibitem anchor="schema" id="schema" semx-id="_28e52f3d-9329-68be-1c71-727f9b56bf73"><biblio-tag/><formattedref format="application/x-isodoc+xml"><strong>Schema.org:</strong> <link target="http://schema.org/docs/schemas.html" id="_4e96d03d-d66c-33e3-088f-2030ff74ce46"/><semx element="link" source="_4e96d03d-d66c-33e3-088f-2030ff74ce46"><fmt-link target="http://schema.org/docs/schemas.html"/></semx></formattedref><docidentifier>Schema.org</docidentifier><docidentifier scope="biblio-tag">Schema.org</docidentifier><language>en</language><script>Latn</script></bibitem>
+
+<bibitem id="rfc2616" type="standard" schema-version="v1.2.9" anchor="rfc2616" semx-id="_aed5eb3c-3dc1-0817-c99d-cede4220322b"><biblio-tag/><formattedref>R. Fielding, J. Gettys, J. Mogul, H. Frystyk, L. Masinter, P. Leach, T. Berners-Lee: IETF RFC 2616, <em>Hypertext Transfer Protocol — HTTP/1.1</em>. RFC Publisher (1999). <fmt-link target="https://www.rfc-editor.org/info/rfc2616">https://www.rfc-editor.org/info/rfc2616</fmt-link>.</formattedref>
+  <fetched>2025-12-06</fetched>
+  
+<title type="main" format="text/plain">Hypertext Transfer Protocol — HTTP/1.1</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2616</uri>
+  <docidentifier type="IETF" primary="true">IETF RFC 2616</docidentifier>
+  <docidentifier type="DOI">DOI 10.17487/RFC2616</docidentifier><docidentifier scope="biblio-tag">IETF RFC 2616</docidentifier>
+  <docnumber>RFC2616</docnumber>
+  <date type="published">
+    <on>1999-06</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">R. Fielding</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Gettys</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">J. Mogul</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">H. Frystyk</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">P. Leach</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">T. Berners-Lee</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_500c5027-f2d3-8511-7d2a-c5d6e9aa5bd4" semx-id="_500c5027-f2d3-8511-7d2a-c5d6e9aa5bd4">HTTP has been in use by the World-Wide Web global information initiative since 1990. This specification defines the protocol referred to as “HTTP/1.1”, and is an update to RFC 2068. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7230</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7230</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7231</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7231</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7232</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7232</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7233</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7233</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7234</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7234</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC7235</formattedref>
+      <docidentifier type="IETF" primary="true">RFC7235</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2616</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>HTTP</keyword>
+  <keyword>Hypertext Transfer Protocol</keyword>
+  <keyword>World Wide Web</keyword>
+  <keyword>WWW</keyword>
+  <keyword>hypermedia</keyword>
+</bibitem>
+<bibitem id="rfc2818" type="standard" schema-version="v1.2.9" anchor="rfc2818" semx-id="_2371b3e0-c9c6-ad89-d437-eba916dbd608"><biblio-tag/><formattedref>E. Rescorla: IETF RFC 2818, <em>HTTP Over TLS</em>. RFC Publisher (2000). <fmt-link target="https://www.rfc-editor.org/info/rfc2818">https://www.rfc-editor.org/info/rfc2818</fmt-link>.</formattedref>
+  <fetched>2025-12-06</fetched>
+  
+<title type="main" format="text/plain">HTTP Over TLS</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc2818</uri>
+  <docidentifier type="IETF" primary="true">IETF RFC 2818</docidentifier>
+  <docidentifier type="DOI">DOI 10.17487/RFC2818</docidentifier><docidentifier scope="biblio-tag">IETF RFC 2818</docidentifier>
+  <docnumber>RFC2818</docnumber>
+  <date type="published">
+    <on>2000-05</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">E. Rescorla</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_e3f7dc12-5704-65de-44f6-327c7336314f" semx-id="_e3f7dc12-5704-65de-44f6-327c7336314f">This memo describes how to use Transport Layer Security (TLS) to secure Hypertext Transfer Protocol (HTTP) connections over the Internet. This memo provides information for the Internet community.</p>
+
+  </abstract>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref format="text/plain">RFC9110</formattedref>
+      <docidentifier type="IETF" primary="true">RFC9110</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>2818</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>hypertext</keyword>
+  <keyword>transfer</keyword>
+  <keyword>protocol</keyword>
+  <keyword>transport</keyword>
+  <keyword>layer</keyword>
+  <keyword>security</keyword>
+</bibitem>
+<bibitem id="rfc3339" type="standard" schema-version="v1.2.9" anchor="rfc3339" semx-id="_7226fdc2-4508-eb42-54b8-3fefaf2c8af1"><biblio-tag/><formattedref>G. Klyne, C. Newman: IETF RFC 3339, <em>Date and Time on the Internet: Timestamps</em>. RFC Publisher (2002). <fmt-link target="https://www.rfc-editor.org/info/rfc3339">https://www.rfc-editor.org/info/rfc3339</fmt-link>.</formattedref>
+  <fetched>2025-12-06</fetched>
+  
+<title type="main" format="text/plain">Date and Time on the Internet: Timestamps</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3339</uri>
+  <docidentifier type="IETF" primary="true">IETF RFC 3339</docidentifier>
+  <docidentifier type="DOI">DOI 10.17487/RFC3339</docidentifier><docidentifier scope="biblio-tag">IETF RFC 3339</docidentifier>
+  <docnumber>RFC3339</docnumber>
+  <date type="published">
+    <on>2002-07</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">G. Klyne</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">C. Newman</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_b16fa87b-b617-2335-835b-affa1b8fc356" semx-id="_b16fa87b-b617-2335-835b-affa1b8fc356">This document defines a date and time format for use in Internet protocols that is a profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>3339</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>Timestamps</keyword>
+  <keyword>gregorian calendar</keyword>
+  <keyword>iso</keyword>
+  <keyword>International Organization for Standardization</keyword>
+</bibitem>
+<bibitem id="rfc8288" type="standard" schema-version="v1.2.9" anchor="rfc8288" semx-id="_a6fdd32e-c08a-2e8d-8ba7-e3b945bdea02"><biblio-tag/><formattedref>M. Nottingham: IETF RFC 8288, <em>Web Linking</em>. RFC Publisher (2017). <fmt-link target="https://www.rfc-editor.org/info/rfc8288">https://www.rfc-editor.org/info/rfc8288</fmt-link>.</formattedref>
+  <fetched>2025-12-06</fetched>
+  
+<title type="main" format="text/plain">Web Linking</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc8288</uri>
+  <docidentifier type="IETF" primary="true">IETF RFC 8288</docidentifier>
+  <docidentifier type="DOI">DOI 10.17487/RFC8288</docidentifier><docidentifier scope="biblio-tag">IETF RFC 8288</docidentifier>
+  <docnumber>RFC8288</docnumber>
+  <date type="published">
+    <on>2017-10</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">M. Nottingham</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_6b067d7f-63bc-a22a-3ff0-230855457788" semx-id="_6b067d7f-63bc-a22a-3ff0-230855457788">This specification defines a model for the relationships between resources on the Web (“links”) and the type of those relationships (“link relation types”).</p>
+
+    <p id="_9fe0d8c2-af93-7865-920d-5c439eceee2c" semx-id="_9fe0d8c2-af93-7865-920d-5c439eceee2c">It also defines the serialisation of such links in HTTP headers with the Link header field.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>8288</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>link relation</keyword>
+</bibitem>
+<bibitem id="rfc7946" type="standard" schema-version="v1.2.9" anchor="rfc7946" semx-id="_a2739e6c-d2b0-4dc2-a39f-6ce4268cc5e7"><biblio-tag/><formattedref>H. Butler, M. Daly, A. Doyle, S. Gillies, S. Hagen, T. Schaub: IETF RFC 7946, <em>The GeoJSON Format</em>. RFC Publisher (2016). <fmt-link target="https://www.rfc-editor.org/info/rfc7946">https://www.rfc-editor.org/info/rfc7946</fmt-link>.</formattedref>
+  <fetched>2025-12-06</fetched>
+  
+<title type="main" format="text/plain">The GeoJSON Format</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc7946</uri>
+  <docidentifier type="IETF" primary="true">IETF RFC 7946</docidentifier>
+  <docidentifier type="DOI">DOI 10.17487/RFC7946</docidentifier><docidentifier scope="biblio-tag">IETF RFC 7946</docidentifier>
+  <docnumber>RFC7946</docnumber>
+  <date type="published">
+    <on>2016-08</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">H. Butler</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">M. Daly</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">A. Doyle</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Gillies</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">S. Hagen</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename language="en" script="Latn">T. Schaub</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name>RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/html" language="en" script="Latn">
+    <p id="_7aab3d2c-88e5-0160-7a64-542b3c9b5c30" semx-id="_7aab3d2c-88e5-0160-7a64-542b3c9b5c30">GeoJSON is a geospatial data interchange format based on JavaScript Object Notation (JSON). It defines several types of JSON objects and the manner in which they are combined to represent data about geographic features, their properties, and their spatial extents. GeoJSON uses a geographic coordinate reference system, World Geodetic System 1984, and units of decimal degrees.</p>
+
+  </abstract>
+  <series>
+    
+<title format="text/plain">RFC</title>
+
+    <number>7946</number>
+  </series>
+  <series type="stream">
+    
+<title format="text/plain">IETF</title>
+
+  </series>
+  <keyword>JSON</keyword>
+  <keyword>Geospatial</keyword>
+  <keyword>JavaScript Object Notation</keyword>
+</bibitem>
+
+<p id="_370ba90e-ebf6-fb5b-dc12-d3cd6f44d27b" semx-id="_370ba90e-ebf6-fb5b-dc12-d3cd6f44d27b">Clause content.<note id="_d72ded61-371c-723a-9ef0-8203fd64eaa7" semx-id="_d72ded61-371c-723a-9ef0-8203fd64eaa7" autonum=""><fmt-name id="_9e96fe8e-b6ce-9c4d-3cf4-7c9280666575"><span class="fmt-caption-label"><span class="fmt-element-name">NOTE</span></span><span class="fmt-label-delim">:<tab/></span></fmt-name><fmt-xref-label><span class="fmt-element-name">Note</span></fmt-xref-label><fmt-xref-label container="_844cb0e6-2b9b-d05c-730f-ff195313e1cf"><span class="fmt-xref-container"><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_844cb0e6-2b9b-d05c-730f-ff195313e1cf">1</semx></span><span class="fmt-comma">,</span> <span class="fmt-element-name">Note</span></fmt-xref-label><p id="_4e45ebba-04d0-1420-23d9-7323881c0f8f" semx-id="_4e45ebba-04d0-1420-23d9-7323881c0f8f">Add any other clauses as needed</p>
+</note></p>
+
+
+</references></sections><bibliography/>
+</metanorma>

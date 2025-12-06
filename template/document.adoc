@@ -1,0 +1,54 @@
+= Building an Ecosystem for theDevelopment, Utilization, and Open Data of 3D City Mofels Based on CityGML: Sharing Insights 
+:comment: ### Document type; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
+:doctype: OGC Discussion Paper
+:comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
+:status: published
+:comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
+:committee: technical
+:comment: ### Internal reference number; mandatory
+:docnumber: 25-032
+:comment: ### Date on which the standard was updated; mandatory
+:received-date: 2025-10-09
+:comment: ### Date on which the standard was approved by the issuing authority; mandatory
+:issued-date: 2025-10-31
+:comment: ### Date on which the standard was published; mandatory
+:published-date: 2017-01-23
+:comment: ###  Year when the copyright for the document was issued; optional
+:copyright-year: 2025
+:comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
+:external-id: http://www.opengis.net/doc/PER/t12-A063
+:comment: ### Author one
+:fullname: Yuka Sogawa
+:role: editor
+:comment: ### Author two
+:fullname_2: Chikako Kurokawa
+:comment: ### Role of the authors; optional. Supply only if correspoding author is an editor
+:role_2: editor
+:comment: ### Author three
+:fullname_3: Nobuhiro Ishimaru
+:role_3: editor
+:comment: ### Author four
+:fullname_4: Thomas H. Kolbe
+:comment: ### Role of the authors; optional. Supply only if correspoding author is an editor
+:role_4: editor
+
+
+:comment: ### Comma delimited keywords; mandatory
+:keywords: Digital Twins, 3D City Models, Urban Planning ADE.
+:comment: ### Semicolon-delimited list of the submitting organizations; mandatory
+:submitting-organizations: organization_1; organization_2; organization_3; etc.
+:comment: ### Metanorma flavor; mandatory
+:mn-document-class: ogc
+:comment: ### Desired output formats; mandatory
+:mn-output-extensions: html
+:comment: ### Directory name used as prefix for the location of image files; optional
+:imagesdir: images
+:comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.org/author/ref/document-attributes/#caches, https://www.metanorma.org/author/topics/building/reference-lookup/#lookup-result-caching
+:local-cache-only:
+
+
+// Clauses
+include::sections/00-preface.adoc[]
+include::sections/01-normative-references.adoc[]
+include::sections/02-other-clauses.adoc[]
+
