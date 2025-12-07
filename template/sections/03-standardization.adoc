@@ -1,0 +1,135 @@
+[[toc3_00]]
+== Standardization of 3D City Models Using CityGML
+[[toc3_01]]
+=== Adopting Standards
+PLATEAU defines a data product specification (hereafter referred to as DPS) that is applicable to all municipalities in Japan. This is because PLATEAU recognizes each municipality as a key stakeholder in the development and updating of 3D city models. In Japan, there are over 1,700 municipalities, and if each creates its own 3D city model independently, there could be 3D city models based on more than 1,700 different DPSs. If the DPSs differ for each city, the reusability of the data decreases. Therefore, the City Bureau of the MLIT has developed a common DPS for 3D city models, named the <<Ref_01, Standard Data Product Specification for 3D City Models>> (hereafter referred to as the “3D City Model Standard DPS”). Subsequent references to this document will use the term "3D City Model Standard DPS."
+
+PLATEAU adopted the OGC standard “CityGML 2.0” as the application schema and the encoding specification for the 3D City Model Standard DPS to ensure interoperability among 3D city models while also addressing the needs of various cities. Although PLATEAU could have developed a proprietary application schema, this approach would have been time-consuming and would have required the development of tools from scratch to handle 3D city models based on that schema. Consequently, PLATEAU decided to adopt CityGML 2.0, which incorporates the expertise of specialists from various countries and has already gained acceptance in advanced cities around the world.
+
+The international standard “CityGML” brings PLATEAU advantages described from the following four perspectives below:
+
+* **Neutrality**: The standard results of discussions among experts from various countries and is not dependent on any specific vendor.
+* **User-Friendly**: Various countries and cities have already implemented CityGML, and tools that support this standard are available. Additionally, since it is in a text-based format, even non-GIS experts can handle CityGML.
+* **Rigor and Scalability**: Not only can the standard define data structures rigorously, but users can also extend the model and schema.
+* **Adaptability**: Compatibility with standards from other fields, such as BIM, has been taken into consideration.
+
+CityGML is a standard for the data model and exchange format for describing, managing, and exchanging 3D city models. This standard conceptualizes a city from a semantic perspective, focusing on what comprises a city. One of the key functions of CityGML is the Level of Detail (LOD) system, which allows a single feature to have geometries at varying levels of detail, as well as an extensibility mechanism known as Generics module and Application Domain Extensions (ADEs) that enables applications across various fields and purposes. By utilizing this LOD and extensibility mechanism, each city can standardize semantics while selectively choosing the information necessary for its specific use cases.
+
+In 2021, the CityGML 3.0 Conceptual Model was published, followed by the encoding specification in GML in 2023. However, PLATEAU began its project in 2020 and has been operating on CityGML 2.0 to date.
+
+[[toc3_02]]
+=== Urban Planning ADE
+CityGML provides definitions for basic features and their properties, while each domain can extend the model by incorporating detailed information tailored to specific purposes through ADE mechanism. In PLATEAU, the <<Ref_19, Urban Planning ADE>> serves to extend CityGML for describing the data necessary for various use cases.
+
+Urban Planning ADE is an ADE developed by the Cabinet Office Secretariat for Promotion of Regional Revitalization. The ADE aims to structure the information necessary to serve an information platform for visualizing urban plans, measures for urban revitalization, and their results (i-Urban Revitalization). This ADE allows users to describe the results of the Urban Planning Survey, which is conducted periodically by the municipalities mentioned in section <<toc2_01,2.1>>, as standardized features and properties. As a result, the Urban Planning Survey outcomes for each city, once used independently, can now be visualized within 3D city models and easily integrated or compared with those of other cities.
+
+PLATEAU has adopted this Urban Planning ADE as well as CityGML from the beginning of the project and gives feedback on the results of use case development to the Urban Planning ADE every year. This feedback loop works as follows: Each city develops 3D CityGML using CityGML and Urban Planning ADE to realize its use cases. If they need any features and properties not defined in either CityGML or the ADE, they use the Generics module. Then, PLATEAU generalizes and structures those missing features and properties and the Cabinet Office reflects the generalized and structured features and properties into the Urban Planning ADE. Finally, PLATEAU updates the 3D City Model Standard DPS to refer to the updated Urban Planning ADE to use the ADE in the next year’s 3D city model and use case development. This feedback loop (<<figure1>>) repeats every year to reflect the user needs of various cities, enhancing the comprehensiveness and practicality of the Urban Planning ADE.
+[[figure1]]
+.Feedback Loop for Enhancing Urban Planning ADE
+image::FIG1.png[Feedback Loop for Enhancing Urban Planning ADE]
+
+In addition, Urban Planning ADE was submitted as a discussion paper with consideration for the harmonization with CityGML and its contribution to the standards community.
+
+[[toc3_03]]
+=== Standard Data Product Specification for 3D City Models
+PLATEAU has developed the <<Ref_01, 3D City Model Standard DPS>> aiming to apply to 3D city model development for all municipalities in Japan. This DPS complies with the ISO 19100 series, adopting CityGML and <<Ref_19, Urban Planning ADE>> as its application schemas and covering all items necessary for data development, such as the coordinate reference systems, quality requirements, and data quality evaluation methods.
+
+Particularly, since data creators for each city may differ, ensuring data homogeneity across the entire Japan is difficult. Therefore, PLATEAU not only defines the DPS as strictly as possible but also supports users in easily understanding the quality of 3D city models and using them.
+
+[[toc3_031]]
+==== Standard Data Product Specification Overview
+In the first version of the <<Ref_01, 3D City Model Standard DPS>>,which was formulated in 2021, the fundamental use cases for 3D city models encompassed “Provision of a foundation for storing various geographic spatial data related to cities (including open data)”, "visualization of urban planning in 3D space" and "3D visualization of disaster risk." These use cases included essential features that define a city, such as Buildings, Roads, Land Use, Urban Planning, Disaster Risk, and Relief Features. Since this first version, the features incorporated into the DPS have been expanded in the third version, published in 2023, to better align with a diverse range of use cases proposed by municipalities, as detailed in Table 1.
+
+[[table1]]
+[cols="1,1,1,1,1,1,1"]
+.Features Covered by the 3D City Model Standard DPS (Numbers Indicate Versions)
+|===
+2+| Feature | LOD0 | LOD1 | LOD2 | LOD3 | LOD4
+2+| Building | V1 | V1 | V1 | V2 | V3
+2+| LandUse |  | V1 |  |  | 
+|Transportation| Road | V3 | V1 | V2 | V2| 
+|Transportation| Track | V3 | V3 | V3 | V3| 
+|Transportation| Square| V3 | V3 | V3 | V3| 
+|Transportation| Railway | V3 | V3 | V3 | V3 | 
+|Transportation| Waterway^2^ | V3 | V3 | V3 | | 
+2+|Urban Plan^1^| | V1, V2 | | |
+2+|Disaster Risk^1^| | V1, V2 | | |
+2+|CityFurniture| V3 | V2 | V2 | V2 |
+2+|Vegetation| V3 | V2 | V2 | V2 |
+2+|Water Body| V3 | V3 | V3 | V3 |
+2+|Relief Feature| V3 | V1 | V3 | V3 |
+2+|Bridge| V3 | V3 | V3 | V3 | V3
+2+|Tunnel| V3 | V3 | V3  | V3 | V3
+2+|Other Construction^2^| V3 | V3 | V3 | V3 |
+2+|Underground Building^1^| V3 | V3 | V3 | V3| V3 
+2+|Utility Network^1^| V3 | V3 | V3 | V3 | V3 
+2+|Zone^1^| | V3 | | |
+2+|Generic City Object | V3 | V1| V1 | V3 | V3
+7+| 
+1: Features delined in Urban Planning ADE
+
+2: Features defined in Urban Planning ADE while ensuring consistency with CityGML 3.0.
+
+|===
+Defining the3D City Model Standard DPS not only accelerates the rapid development of 3D city models and associated use case systems across various Japanese cities, but also streamlines the development of common software solutions, such as quality control and data conversion.
+
+Between 2020 and 2024, a total of over 250 cities created 3D city models based on the DPS and All 3D city models developed in PLATEAU are available as open data through the <<Ref_03,PLATEAU Data Portal>> at the <<toc2_05, Geospatial Information Center>>.
+
+By establishing the 3D City Model Standard DPS, the development of common software streamlined, allowing for a focused allocation of resources to non-standardized areas. These software solutions are available from the <<Ref_04,Open-Source Portal (GitHub)>> as open source and can be deployed in cities planning to develop 3D city models in the future. Historically, systems have been developed individually for each city and application; however, by utilizing common software, efficient system development can be achieved.
+
+[[toc3_032]]
+==== LOD Refinement
+CityGML 2.0 defines five levels in LOD: The coarsest level LOD0 is a two and a half dimensional Digital Terrain Model over which an aerial image or a map may be draped. LOD1 is the well-known blocks models with flat roof structures. In contrast, LOD2 has differentiated roof structures, and thematically differentiated boundary surfaces; furthermore, LOD2 may have outer installations. LOD3 denotes architectural models with detailed wall and roof structures potentially including openings. LOD4 completes a LOD3 model by adding interior structures.
+
+<<figure2>> presents building models in LOD2 created in two different cities in 2020, the first year of the project. The building depicted in Figure 2 for City A features roof installations and accurately captures the intricate geometries of the wall surfaces. In contrast, the building in City B omits roof installations and presents a simplified representation of the wall surfaces. Both building models meet the definition of LOD2 and are valid models at this level. However, the simplified model from City B cannot adequately support applications requiring detailed models, such as that of City A. Conversely, supplying a detailed model like that of City A to applications designed for simpler representations, like that of City B, may result in excessive data volume and subsequent operational challenges. Both detailed and simplified LOD2 building models possess distinct advantages and disadvantages, making the assertion of the superiority of one over the other difficult. The key factor is to establish a consensus on the definition of LOD2 between data providers and data users. This mutual agreement is essential for ensuring effective communication and utilization of the data in various applications.
+
+[[figure2]]
+.Examples of variations in shape reproducibility within the same LOD
+image::FIG2.png[Examples of variations in shape reproducibility within the same LOD]
+
+Consequently, to ensure mutual understanding among relevant stakeholders, PLATEAU has made a clear definition of each feature for each LOD. Furthermore, the subdivision of the LODs is introduced in the 3D City Model Standard DPS based on the research of <<Biljecki,Biljecki et al>>.　LODs are subdivided based on data owned by municipalities, since are designated as the responsible entities for maintenance to ensure sustainability (<<figure3>>). Specifically, municipalities can create LOD0, LOD1 and LOD2 using their aerial photographs or aerial laser point cloud data, thereby encompassing the entire city. LOD3 can be derived from data specifically acquired for individual use cases, primarily comprising images and point cloud data obtained through Mobile Mapping Systems. Furthermore, highly detailed LOD3 and LOD4 representations assume the use of Building Information Modeling (BIM) data.
+
+[[figure3]]
+.LOD subdivisions for LOD2 and LOD3
+image::FIG3.png[LOD subdivisions for LOD2 and LOD3]
+
+<<figure4>> represents examples of each LOD subdivisions. In the LOD2 subdivisions, as the LOD increases, the roof shapes become more detailed, and the classifications of installations become more specific. In the LOD3 subdivisions, the increasing LOD captures smaller openings, while detailing from the side includes recesses and overhangs. In contrast, LOD2 does not represent recesses and overhangs.
+
+The definitions of each LOD subdivision serve as a guideline for data creators when producing data. This allows them to create data that is consistent and tailored to requirements, avoiding both overly detailed and overly simplified datasets. Additionally, for data users, these definitions serve as a criterion to assess whether the quality meets their requirements, leading to an enhancement in the reusability of the 3D city models.
+
+
+[[figure4]]
+.Examples of LOD subdivisions
+image::FIG4.png[Examples of LOD subdivisions]
+
+PLATEAU has set the default subdivisions of LODs as “LOD X.0” and each municipality can select the appropriate subdivision for their use cases. The quality attributes of each feature defined in the Urban Planning ADE describe the selected LOD subdivisions, allowing users to understand the applied subdivision. In this way, PLATEAU defines the comprehensive DPS for both data creators and users by localizing LODs in terms of homogeneity and feasibility.
+
+[[toc3_033]]
+==== Mechanism for Profiling
+
+Features and properties required for 3D city models vary depending on the purpose, and they may also differ based on the size and environment of cities, even if the purpose is the same. However, if each city defines its DPS independently, the reusability of its 3D city models becomes limited, even though they are optimized for specific purpose.
+
+Therefore, PLATEAU defines the <<Ref_01,3D City Model Standard DPS>>, which comprehensively covers various features and properties, and rules to create a profile based on the specific needs of each municipality’s use case. Each municipality selects features, properties and LODs that are necessary for its use cases. In addition, if there are any features or properties not defined in the 3D City Model Standard DPS, municipalities can add them using the Generics module. This profile becomes an extended DPS for each city.
+
+In other words, CityGML models the concept of a city from a semantic perspective, and by adopting the Urban Planning ADE, which is an extension of CityGML, PLATEAU creates a comprehensive common data product specification (3D City Model Standard DPS) that serves as the implementation specification. Through a framework that allows for the creation of city-specific profiles using this standard DPS, PLATEAU can meet the unique needs of each city while ensuring the reusability of the data (<<figure5>>).
+
+[[figure5]]
+.Mechanism of Profiling
+image::FIG5.png[Mechanism of Profiling]
+
+By standardizing the product specifications of 3D city models in each municipality, the development of tools for creating or utilizing 3D city models can also be made more efficient. In fact, various tools such as PLATEAU Flow for quality management of 3D city models, PLATEAU VIEW for visualization, PLATEAU-GIS-Converter for converting CityGML to other GIS data formats, and PLATEAU SDK for Unity/Unreal for application development using 3D city models are compatible with CityGML and Urban Planning ADE, making them available for use in all municipalities.
+
+Additionally, to improve the reusability of 3D city models created by municipalities, PLATEAU recommends that they include a “Basic Set”, which is composed of common features such as buildings and roads and LODs, into their 3D city models even if the set is not required for their use cases (<<table2>>). 
+
+[[table2]]
+[cols="1,1"]
+.Features and LODs of Basic Set
+|===
+|Feature|LOD
+|Building|LOD0, LOD1, LOD2
+|Road|LOD1
+|Land Use|LOD1
+|Disaster Risk|LOD1
+|Urban Plan|LOD1
+|Relief Feature|LOD1
+|===

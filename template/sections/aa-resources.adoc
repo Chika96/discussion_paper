@@ -1,0 +1,25 @@
+
+[appendix]
+== PLATEAU Resources
+
+* [[Ref_00]]PLATEAU Website: https://www.mlit.go.jp/plateau/
+* [[Ref_01]]Standard Data Product Specification for 3D City Models: https://www.mlit.go.jp/plateaudocument/
+* [[Ref_02]]Standard Implementation Procedures for 3D City Model: https://www.mlit.go.jp/plateaudocument02/
+* [[Ref_03]]Open-Data Portal (Geospatial Information Center): https://front.geospatial.jp/plateau_portal_site/
+* [[Ref_04]]Open-Source Portal (GitHub): https://github.com/Project-PLATEAU
+** [[Ref_05]]PLATEAU-Auto-Create-bldg-lod2-tool: https://github.com/Project-PLATEAU/Auto-Create-bldg-lod2-tool
+** [[Ref_06]]PLATEAU2Minecraft: https://github.com/Project-PLATEAU/plateau2minecraft
+** [[Ref_07]]PLATEAU-Builder: https://github.com/Project-PLATEAU/PLATEAU-Builder
+** [[Ref_08]]PLATEAU-FLOW:https://github.com/Project-PLATEAU/PLATEAU-VIEW-4.0/tree/main/flow
+** [[Ref_09]]PLATEAU-GIS-Converter: https://github.com/Project-PLATEAU/PLATEAU-GIS-Converter
+** [[Ref_10]]PLATEAU-IFC-to-CityGML2.0-LOD4:https://github.com/Project-PLATEAU/PLATEAU-IFC-to-CityGML2.0-LOD4
+** [[Ref_11]]PLATEAU-QGIS-Plugin: https://github.com/Project-PLATEAU/plateau-qgis-plugin
+** [[Ref_12]]PLATEAU-SDK-for-Unity: https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity
+** [[Ref_13]]PLATEAU-SDK-for-Unreal: https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unreal
+** [[Ref_14]]PLATEAU-VIEW: https://github.com/Project-PLATEAU/PLATEAU-VIEW-4.0
+* [[Ref_15]]PLATEAU Use Cases: https://www.mlit.go.jp/plateau/use-case/
+* [[Ref_16]]PLATEAU Technical Reports: https://www.mlit.go.jp/plateau/libraries/technical-reports/
+* [[Ref_17]]PLATEAU Consortium: https://www.mlit.go.jp/plateau/consortium/
+* [[Ref_18]]PLATEAU Next: https://www.mlit.go.jp/plateau-next/
+* [[Ref_20]]PLATEAU Tutorials: https://www.mlit.go.jp/plateau/learning/
+* [[Ref_19]]i-UR (Urban Planning ADE): https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur

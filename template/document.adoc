@@ -1,8 +1,8 @@
 = Building an Ecosystem for theDevelopment, Utilization, and Open Data of 3D City Mofels Based on CityGML: Sharing Insights 
 :comment: ### Document type; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
-:doctype: OGC Discussion Paper
+:doctype: discussion-paper
 :comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
-:status: published
+:status: approved
 :comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
 :committee: technical
 :comment: ### Internal reference number; mandatory
@@ -12,7 +12,7 @@
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
 :issued-date: 2025-10-31
 :comment: ### Date on which the standard was published; mandatory
-:published-date: 2017-01-23
+:published-date: 2025-MM-DD
 :comment: ###  Year when the copyright for the document was issued; optional
 :copyright-year: 2025
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
@@ -48,7 +48,13 @@
 
 
 // Clauses
-include::sections/00-preface.adoc[]
-include::sections/01-normative-references.adoc[]
-include::sections/02-other-clauses.adoc[]
-
+//include::sections/00-preface.adoc[]
+include::sections/01-introduction.adoc[]
+include::sections/02-background.adoc[]
+include::sections/03-standardization.adoc[]
+include::sections/031-standardization.adoc[]
+include::sections/04-step2goal.adoc[]
+include::sections/05-discussions.adoc[]
+include::sections/06-conclusions.adoc[]
+include::sections/aa-resources.adoc[]
+include::sections/az-bibliography.adoc[]

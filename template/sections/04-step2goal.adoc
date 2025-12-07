@@ -1,0 +1,96 @@
+[[toc4_00]]
+== Building an Ecosystem for Developing, Utilizing, and Open-Sourcing 3D City Models
+[[toc4_01]]
+=== Step Toward the Goal
+As the goal of the project, PLATEAU aims for "data coverage to encompass all of Japan and for 3D city models to become widely adopted as digital infrastructure." To achieve this, three stages (<<figure7>>) have been established. Setting these stages provides a framework to clarify objectives at each stage and to implement indicators for measuring progress, as well as effective strategies. Below are the three stages set by PLATEAU.
+
+* Phase 1: “Prototype Development: This phase involves collaborating with various players from industry, government, and academia who are interested in advanced technologies to verify the potential of 3D city models. The phase includes proactive data development by leading municipalities and the development of prototype services by innovative companies and local communities using that data.
+* Phase 2: "Implementation of Attractive Services": This phase focuses on implementing solutions that bring new value to society and address regional challenges through urban digital twins. As data coverage and awareness expand, the pool of players participating in service development also broadens. Additionally, monetizable services will emerge.
+* Phase 3: "Spread as Digital Infrastructure": This phase marks the completion of an "ecosystem" where the development, utilization, and open data sharing of 3D city models evolve autonomously. As attractive services utilizing 3D city models are continuously offered, the advantages of data-holding cities become evident, leading to further expansion of data coverage. Consequently, the participants and users will also grow to become a majority group.
+
+
+
+[[figure7]]
+.Steps Toward the Goal
+image::FIG7.png[Steps Toward the Goal]
+[[toc4_02]]
+=== PLATEAU Ecosystem
+The 3D city model must reflect changes in the real world, requiring continuous updates to the model. To achieve this, it is important to clearly define the roles of each participant that constitutes the ecosystem for the development, utilization, and open data sharing of 3D city models, ensuring that all participants fulfill their respective roles. From this perspective, PLATEAU aims to establish an ecosystem where industry, government, and academia collaborate to advance the development, utilization, and open data sharing of 3D city models (<<figure8>>). 
+
+[[figure8]]
+.PLATEAU Ecosystem
+image::FIG8.png[PLATEAU Ecosystem]
+
+The participants that constitute the ecosystem are the "National Government," "Local Governments," "Innovation Companies," and "Local Communities."
+
+* The "National Government" refers to relevant governmental agencies, including the MLIT's City Bureau. The National Government implements fundamental policies and initiatives related to research and development investment, improvement of the data utilization environment, community building, and ecosystem building. The National Government also accumulates knowledge related to foundational technology development and advanced technology development with strong research elements and shares this knowledge with relevant stakeholders in non-competitive areas.
+* "Local Governments" refer to prefectures and municipalities. This includes a wide range of departments involved in digital policies, not limited to urban planning departments. Local Governments utilize the knowledge developed by the National Government to conduct the development, utilization, and open data sharing of 3D city models, promoting the expansion of data coverage and the social implementation of use cases related to administrative services.
+* "Innovation Companies" refer to businesses that are eager to develop services utilizing innovative technologies, including small and medium-sized enterprises and startups that exist within each local government. Innovation Companies are responsible for the social implementation of new services that utilize 3D city models.
+* "Local Communities" refer to technology holders rooted in the region, such as universities, civic tech organizations, and engineering communities. Local Communities focus on developing innovations and seeds utilizing 3D city models and enhancing the digital capabilities of local governments and citizens.
+
+=== The Role of the National Government in the PLATEAU Ecosystem
+PLATEAU is a project led by the MLIT, the national government agency; however, relying solely on the national government for initiatives would lack sustainability. Therefore, the initiative is implementing fundamental policies and improvements to create a system and environment that enable each participant, including "Local Governments," to fulfill their respective roles and realize the ecosystem. The main initiatives are outlined below.
+
+==== Expansion Data Coverage
+As part of the national government's role, efforts are being made to improve the usability of 3D city models, reduce maintenance costs, and enhance data interoperability and distribution. This includes the development of standard data models and data preparation methods, aiming to advance the sophistication and efficiency of data maintenance and updates for 3D city models.
+
+* Standardization of 3D City Models: In addition to the development of the aforementioned 3D City Model Standard DPS, <<Ref_02,"Standard Operating Procedure for 3D City Models">> has been created for surveying companies that produce data based on this specification, aiming to standardize and homogenize the data.
+
+* Development of 3D City Model Creation Technologies: To enhance the efficiency of data creation, a quality management system (<<Ref_08,PLATEAU Flow>>) has been developed along with an <<Ref_05,automated tool for generating building models (LOD2) using AI>> and a <<Ref_10,converter for integrating BIM models into 3D city models>>. 
+Through these fundamental measures and initiatives to improve the environment implemented by the national government, 3D city models have been established in about 250 cities within the five years since the project began in 2020. Although there are over 1,700 cities across Japan, resulting in a low coverage rate in terms of area, 3D city models have been developed in major cities such as Tokyo, Osaka, and Sapporo, leading to a population coverage rate that exceeds half of the total population (Figure 9).
+
+
+[[figure9]]
+.Data Coverage as of 2025
+image::FIG9.png[Data Coverage as of 2025]
+
+In addition, PLATEAU has adopted the CC BY 4.0 license for sharing all outcomes developed under the project, including technical documents such as the <<Ref_01,3D City Model Standard DPS>>, 3D city models created based on this specification for various cities and various tools, allowing anyone to freely download and use them. By making the results of PLATEAU open access, the initiative not only supports the development and utilization of 3D city models by local governments but also encourages their use in business. The following are examples of tools developed and released with the aim of promoting data creation and utilization:
+
+* <<Ref_07,PLATEAU-Builder>>: Software designed for the straightforward and efficient editing, quality checking, and output of 3D city models in CityGML format, adhering to the 3D City Model Standard DPS. The software was developed to enable not only surveying companies with specialized technical skills but also individuals looking to use and create 3D city models, as well as vendors from various fields who lack expertise in 3D city modeling, to easily generate 3D city models for research and validation purposes.
+* <<Ref_14,PLATEAU-VIEW>>: A browser-based GIS that visualizes 3D city models developed in accordance with the 3D City Model Standard DPS. The PLATEAU-VIEW also allows for the overlay of various geospatial data.
+* <<Ref_12,PLATEAU-SDK-for-Unity>>: A toolkit for utilizing 3D city models in Unity that allows for easy conversion and export of 3D city models to FBX, OBJ, or glTF formats, development of games set in the real world, and conducting urban simulations that leverage PLATEAU's rich data. Similarly, a tool for utilizing 3D city models in <<Ref_13,Unreal Engine>> is also provided.
+* <<Ref_11,PLATEAU-QGIS-Plugin>>: A plugin for importing 3D city models into QGIS.
+* <<Ref_06,PLATEAU2Minecraft>>: A tool for converting 3D city models into a data format that can be imported into Minecraft.
+
+[[toc4_03]]
+==== Use Case Development
+The national government is collaborating with private companies, startups, universities, research institutions, and local governments to address social challenges and create new value using 3D city models. They are conducting proof of concept (PoC) for development of solutions in various fields (<<figure10>>). By publishing not <<Ref_15,only overviews of all use cases>> but also the results as <<Ref_16,technical reports>> and <<Ref_04,open-source software (OSS)>>, they are promoting the horizontal deployment of these solutions in other cities.
+
+[[figure10]]
+.Use Cases in Various Fields
+image::FIG10.webp[Use Cases in Various Fields]
+
+Open access to 3D city models and various tools is also promoting their use in private business. For example, they are used for landscape simulations in the real estate development sector, for creating 3D printed models used in wind tunnel experiments, and in the entertainment industry for air races utilizing XR technology, as well as for computer-generated imagery in movies and music videos. 
+
+Additionally, as an initiative to support the development of use cases, MLIT launched a subsidy program for municipalities in 2022. This program provides financial assistance from the national government for the development of use cases that utilize 3D city models, assuming the models are made available as open data. Within the three years leading up to 2024, 76 municipalities have already utilized this subsidy program for the development of use cases and the establishment of 3D city models, increasing the proportion of 3D city model development by municipalities year by year (<<figure11>>). Furthermore, starting in 2025, MLIT also initiated a support program for private enterprises.
+
+[[figure11]]
+.Share of Entities Involved in 3D City Model Development
+image::FIG11.png[Share of Entities Involved in 3D City Model Development]
+[[toc4_04]]
+==== Community Building
+The national government is actively supporting community building to promote open innovation utilizing 3D city models provided as open data.
+
+* <<Ref_17,PLATEAU Consortium>>: The PLATEAU Consortium was established as a platform where diverse stakeholders from industry, academia, and government can share challenges and discuss issues openly, focusing on best practices related to data development, use case creation, and open data initiatives to promote the construction of the PLATEAU ecosystem. This consortium is operated by the Association for Promotion of Infrastructure Geospatial Information Distribution (AIGID), which aims to improve the distribution environment for collecting, disseminating, and utilizing information related to social infrastructure through collaboration among industry, government, and academia. AIGID also manages the Geospatial Information Center, which publishes 3D city models as open data. The PLATEAU Consortium provides materials (such as case studies) to support the internal project formation and approval processes of local governments, conducts technical training in collaboration with the surveying industry to expand the pool of companies available for contracting, and facilitates matching (B&G) between municipalities with needs for solving local issues using 3D city models and companies offering solutions using 3D city models. Additionally, they support matching (B&B) for the formation of new services through collaboration among private companies.
+* <<Ref_18,PLATEAU NEXT / PLATEAU AWARD>>: PLATEAU NEXT is a collective of various events (such as hackathons, lightning talks, and pitch events shown in <<figure12>>) aimed at stimulating the use of various open data related to urban development, including 3D city models. The PLATEAU NEXT aims to engage a broad audience and gather innovative ideas on how to utilize 3D city models. The PLATEAU AWARD is a development competition held as a culmination of these events, targeting services, applications, and artworks that utilize 3D city models. Each year, new ideas that emerge from this initiative become viable business ventures or lead to collaborative services implemented in partnership with companies involved in PLATEAU, creating new value from 3D city models.
+
+[[figure12]]
+.Activities Fostering Community Building
+image::FIG12.webp[Activities Fostering Community Building]
+
+In addition, PLATEAU supports open innovation initiatives by providing development tools such as the <<Ref_12,PLATEAU SDK for Unity/Unreal>>, as well as <<Ref_20,tutorials>> and tips on the basic handling of 3D city models and creating applications, available in both text and video formats. These resources are accessible not only to participants of various events but also to anyone interested in 3D city models.
+[[toc4_05]]
+=== The Role of Standards in the PLATEAU Ecosystem
+PLATEAU adopts CityGML (and <<Ref_19,Urban Planning ADE>>) as the application schema and the encoding specification for the 3D City Models. This significantly contributes to ensuring the interoperability of 3D city models within the PLATEAU Ecosystem. The 3D city models are described and stored in CityGML format, but when utilized, they are converted into appropriate formats for the specific application area. For example, in WebGIS, users convert the data to 3D Tiles, which is an OGC standard. Similarly, in GIS, they transform the data into GeoPackage, which is also an OGC standard. The same process applies during the data creation phase. Data creators produce the data in the format relevant to their field and then convert it to CityGML format for integration into the 3D city model. For instance, when users create a building in IFC format using BIM, they convert it to CityGML and integrate into the 3D city model. In this way, CityGML serves as a bridge between various data formats for the utilization and creation of 3D city models (<<figure13>>).
+
+[[figure13]]
+.CityGML Bridging Various Data Formats for 3D City Models
+image::FIG13.png[CityGML Bridging Various Data Formats for 3D City Models]
+
+PLATEAU provides useful tools that support data conversion for data utilization and creation.
+
+* <<Ref_09,PLATEAU-GIS-Convertor>>: A proof-of-concept GUI and CLI tool for converting PLATEAU's 3D city models (CityGML) of Japan into various geospatial formats, including 3D Tiles, GeoPackage, KML, glTF, MVT, and GeoPackage.
+* <<Ref_10,PLATEAU-IFC-to-CityGML2.0-LOD4>> : An FME workbench template for converting IFC (IFC 2x3 CV 2.0) to a CityGML LOD4 building model. 
+
+Moreover, CityGML is not just a format intended for intermediary purposes. The explicitly defined object structure and semantics of CityGML and the Urban Planning ADE can be "understood" and utilized by AI agents using Large Language Models (LLMs). Users can query the urban digital twin in natural language, and their inquiries are then transformed into queries for the CityGML + ADE datasets or databases. For example, when a user asks in natural language, "What is the average height of buildings in this area?" or "How many buildings in this area are at risk of flooding due to rivers?" the LLMs can extract specific information in response to these questions using the data from the 3D city model.
+The 3D city models created in accordance with the 3D City Model Standard DPS are quality-assured, making them highly suitable for training AI models to generate semantically rich 3D city models from source data such as sensors and point clouds in the future. Additionally, the data serves as "ground truth" for assessing the quality of AI-generated 3D city models.

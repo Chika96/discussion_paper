@@ -8,41 +8,20 @@ thead th { font-weight: bold; background-color: aqua; }
 .severity3 { font-style: italic; color: grey; }
 </style>
 </head><body><h1>./document.err.html errors</h1>
-<ul><li><p><b><a href="#Relaton">Relaton</a></b>: Severity 3: <b>8</b> errors</p></li>
+<ul><li><p><b><a href="#AsciiDoc_Input">AsciiDoc Input</a></b>: Severity 2: <b>1</b> error</p></li>
 
-<li><p><b><a href="#Style">Style</a></b>: Severity 2: <b>4</b> errors</p></li>
+<li><p><b><a href="#Style">Style</a></b>: Severity 2: <b>7</b> errors</p></li>
 
-<li><p><b><a href="#Metanorma_XML_Syntax">Metanorma XML Syntax</a></b>: Severity 2: <b>40</b> errors</p></li>
+<li><p><b><a href="#Metanorma_XML_Syntax">Metanorma XML Syntax</a></b>: Severity 2: <b>2</b> errors</p></li>
 </ul>
-<h2 id="Relaton">Relaton</h2>
+<h2 id="AsciiDoc_Input">AsciiDoc Input</h2>
 <table border="1">
 <thead><th width="5%">Line</th><th width="20%">ID</th><th width="10%">Error</th>
 <th width="20%">Message</th><th width="40%">Context</th><th width="5%">Severity</th></thead>
 <tbody>
-<tr class="severity3">
-<td></td><th><code>GMLSF</code></th><td>RELATON_4</td>
-<td>(Error from Relaton) <code>GMLSF</code> does not have a recognised prefix</td><td><pre></pre></td><td>3</td></tr>
-<tr class="severity3">
-<td></td><th><code>GMLSF</code></th><td>RELATON_4</td>
-<td>(Error from Relaton) <code>GMLSF</code> does not have a recognised prefix</td><td><pre></pre></td><td>3</td></tr>
-<tr class="severity3">
-<td></td><th><code>HTML5</code></th><td>RELATON_4</td>
-<td>(Error from Relaton) <code>HTML5</code> does not have a recognised prefix</td><td><pre></pre></td><td>3</td></tr>
-<tr class="severity3">
-<td></td><th><code>HTML5</code></th><td>RELATON_4</td>
-<td>(Error from Relaton) <code>HTML5</code> does not have a recognised prefix</td><td><pre></pre></td><td>3</td></tr>
-<tr class="severity3">
-<td></td><th><code>Open API Initiative</code></th><td>RELATON_4</td>
-<td>(Error from Relaton) <code>Open API Initiative</code> does not have a recognised prefix</td><td><pre></pre></td><td>3</td></tr>
-<tr class="severity3">
-<td></td><th><code>Open API Initiative</code></th><td>RELATON_4</td>
-<td>(Error from Relaton) <code>Open API Initiative</code> does not have a recognised prefix</td><td><pre></pre></td><td>3</td></tr>
-<tr class="severity3">
-<td></td><th><code>Schema.​org</code></th><td>RELATON_4</td>
-<td>(Error from Relaton) <code>Schema.​org</code> does not have a recognised prefix</td><td><pre></pre></td><td>3</td></tr>
-<tr class="severity3">
-<td></td><th><code>Schema.​org</code></th><td>RELATON_4</td>
-<td>(Error from Relaton) <code>Schema.​org</code> does not have a recognised prefix</td><td><pre></pre></td><td>3</td></tr>
+<tr class="severity2">
+<td></td><th><code>--</code></th><td>STANDOC_16</td>
+<td>Section not marked up as [bibliography]!</td><td><pre>#&lt;Asciidoctor::Section@5360 {level: 1, title: &quot;B. Bibliography&quot;, blocks: 1}&gt;</pre></td><td>2</td></tr>
 </tbody></table>
 <h2 id="Style">Style</h2>
 <table border="1">
@@ -61,6 +40,27 @@ thead th { font-weight: bold; background-color: aqua; }
 <tr class="severity2">
 <td></td><th><code>--</code></th><td>OGC_14</td>
 <td>Submitters is missing!</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>000075</td><th><code><a href='./document.html#toc2_00'>toc2_00</a></code></th><td>STANDOC_48</td>
+<td>(generic warning) Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_98e054b3-abd3-f24d-bcb7-e0e3c31a75c9&quot; anchor=&quot;toc2_00&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_a19ad49e-141f-d88e-87ca-4c5601873060&quot;&gt;Background&lt;/title&gt;
+&lt;p id=&quot;_d52692dc-9994-9b07-9727-5aa4349c5811&quot;&gt;This section reflects on past policies regarding the development, utilization, and distribution of geospatial information in Japan as background for PLATEAU.&lt;/p&gt;
+
+&lt;clause id=&quot;_22446d19-d72e-e750-98ef-6557c7f88118&quot; anchor=&quot;toc2_01&quot; obligation=&quot;normative&quot;&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>000165</td><th><code><a href='./document.html#toc3_03'>toc3_03</a></code></th><td>STANDOC_48</td>
+<td>(generic warning) Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_83e44a5d-1816-0f20-d1d0-abca6e28c987&quot; anchor=&quot;toc3_03&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_d78c2d16-10af-84e7-a18a-02d3ba1fa35a&quot;&gt;Standard Data Product Specification for 3D City Models&lt;/title&gt;
+&lt;p id=&quot;_80202bca-b235-65fc-baea-fc2200e2607f&quot;&gt;PLATEAU has developed the &lt;xref target=&quot;Ref_01&quot;&gt; &lt;display-text&gt;3D City Model Standard DPS&lt;/display-text&gt; &lt;/xref&gt; aiming to apply to 3D city model development for all municipalities in Japan. This DPS complies with the ISO 19100 series, adopting CityGML and &lt;xref target=&quot;Ref_19&quot;&gt; &lt;display-text&gt;Urban Planning ADE&lt;/display-text&gt; &lt;/xref&gt; as its application schemas and covering all items necessary for data development, such as the coordinate reference systems, quality requirements, and data quality evaluation methods.&lt;/p&gt;
+
+&lt;p id=&quot;_49a8a8bc-8019-fc23-03f4-a131a8df53bb&quot;&gt;Particularly, since data creators for each city may differ, ensuring data homogeneity across the entire Japan is difficult. Therefore, PLATEAU not only defines the DPS as strictly as possible but also supports users in easily understanding the quality of 3D city models and using them.&lt;/p&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>000408</td><th><code><a href='./document.html#_838b663c-65e6-40d5-53f8-d771ff43fd8c'>_838b663c-65e6-40d5-53f8-d771ff43fd8c</a></code></th><td>STANDOC_48</td>
+<td>(generic warning) Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_838b663c-65e6-40d5-53f8-d771ff43fd8c&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_35b527ba-c48a-4170-a4dc-1a14f6d89d8f&quot;&gt;The Role of the National Government in the PLATEAU Ecosystem&lt;/title&gt;
+&lt;p id=&quot;_0c15829a-6144-b1d2-ad2b-eea2a666ab1f&quot;&gt;PLATEAU is a project led by the MLIT, the national government agency; however, relying solely on the national government for initiatives would lack sustainability. Therefore, the initiative is implementing fundamental policies and improvements to create a system and environment that enable each participant, including “Local Governments,” to fulfill their respective roles and realize the ecosystem. The main initiatives are outlined below.&lt;/p&gt;
+
+&lt;clause id=&quot;_cce52c35-8e34-c52f-91a8-87c1c3a6f6bd&quot; obligation=&quot;normative&quot;&gt;</pre></td><td>2</td></tr>
 </tbody></table>
 <h2 id="Metanorma_XML_Syntax">Metanorma XML Syntax</h2>
 <table border="1">
@@ -68,124 +68,10 @@ thead th { font-weight: bold; background-color: aqua; }
 <th width="20%">Message</th><th width="40%">Context</th><th width="5%">Severity</th></thead>
 <tbody>
 <tr class="severity2">
-<td></td><th><code>XML Line 000069:12</code></th><td>STANDOC_7</td>
-<td>element "sections" incomplete; expected element "clause",​ "definitions", "floating-title" or "terms"</td><td><pre></pre></td><td>2</td></tr>
+<td></td><th><code>XML Line 000005:234</code></th><td>STANDOC_7</td>
+<td>character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?​\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]​\d|0[1-9]|3[01]​))?|W([0-4]\d|5[0-2])(-?[1-7])?​|(00[1-9]|0[1-9]\d|[12]​\d{2}|3([0­-5]\d|6[1-6]))))?"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 000220:18</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000220:26</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000221:41</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000221:49</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000222:28</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000222:36</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000223:17</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000223:25</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000224:24</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000224:32</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000286:23</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000286:31</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000287:22</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000287:30</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000288:22</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000288:30</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000289:23</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000289:31</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000290:19</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000290:27</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000291:22</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000291:30</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000354:24</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000354:32</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000355:32</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000355:40</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000356:17</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000356:25</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000357:60</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000357:68</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000414:27</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000414:35</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000509:18</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000509:26</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000510:24</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000510:32</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000511:40</code></th><td>STANDOC_7</td>
-<td>text not allowed here; expected element "taxon" or "vocab"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000511:48</code></th><td>STANDOC_7</td>
-<td>element "keyword" incomplete; missing required element "taxon"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 000514:47</code></th><td>STANDOC_7</td>
-<td>element "p" not allowed here; expected the element end-tag or element "bibitem", "note" or "references"</td><td><pre></pre></td><td>2</td></tr>
+<td></td><th><code>XML Line 000607:95</code></th><td>STANDOC_7</td>
+<td>value of attribute "obligation" is invalid; must be equal to "informative" or "normative"</td><td><pre></pre></td><td>2</td></tr>
 </tbody></table>
 </body></html>
