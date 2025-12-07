@@ -1,38 +1,40 @@
 = Building an Ecosystem for theDevelopment, Utilization, and Open Data of 3D City Mofels Based on CityGML: Sharing Insights
 :comment: ### Document type; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
-:doctype: discussion paper
+:doctype: discussion-paper
 :comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
-:status: published
+:status: approved
 :comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
 :committee: technical
 :comment: ### Internal reference number; mandatory
 :docnumber: 25-032
 :comment: ### Date on which the standard was updated; mandatory
-:received-date: 2017-06-29
+:received-date: 2025-10-09
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
-:issued-date: 2017-06-29
+:issued-date: 2025-10-31
 :comment: ### Date on which the standard was published; mandatory
-:published-date: 2017-01-23
+:published-date: 2025-MM-DD
 :comment: ###  Year when the copyright for the document was issued; optional
-:copyright-year: 2017
+:copyright-year: 2025
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
 :external-id: http://www.opengis.net/doc/PER/t12-A063
 :comment: ### Author one
 :fullname: Yuka Sogawa
+:role: editor
 :comment: ### Author two
 :fullname_2: Chikako Kurokawa
 :comment: ### Role of the authors; optional. Supply only if correspoding author is an editor
 :role_2: editor
 :comment: ### Author three
-:fullname: Nobuhiro Ishimaru
+:fullname_3: Nobuhiro Ishimaru
+:role_3: editor
 :comment: ### Author four
-:fullname_2: Thomas H. Kolbe
+:fullname_4: Thomas H. Kolbe
 :comment: ### Role of the authors; optional. Supply only if correspoding author is an editor
-:role_2: editor
+:role_4: editor
 
 
 :comment: ### Comma delimited keywords; mandatory
-:keywords: keyword_1, keyword_2, keyword_3, etc.
+:keywords: Digital Twins, 3D City Models, Urban Planning ADE.
 :comment: ### Semicolon-delimited list of the submitting organizations; mandatory
 :submitting-organizations: organization_1; organization_2; organization_3; etc.
 :comment: ### Metanorma flavor; mandatory
@@ -46,62 +48,384 @@
 
 
 // Clauses
+//include::sections/00-preface.adoc[]
 
-////
-Preface sections must include [.preface] attribute
-in order to get them placed in the preface area (and not in the main content).
-
-Keywords specified in document preamble will display in this area
-after the abstract
-////
-
-[.preface]
+[[toc1_00]]
 == Introduction
+3D city models that replicate the physical structure of the cities serve as a crucial foundation for integrating various data related to those cities, in the implementation of Urban Digital Twins (UDTs). Standardizing 3D city models is necessary to improve interoperability, enable efficient development and operation, and ensure data quality. However, in domains and organizations where existing processes and customs are well established, there is strong resistance to change, making standardization difficult.
 
-// Insert introduction content, adding subsections as needed
+“<<Ref_00,PLATEAU>>”, the urban digital twin realization project led by the City Bureau of Japan's Ministry of Land, Infrastructure, Transport, and Tourism (MLIT) and in collaboration with various stakeholders, has developed 3D city models for over 250 cities and more than 100 use cases within five years since its launch in 2020. The open standard “CityGML” supports this rapid development in PLATEAU. By adopting CityGML, PLATEAU has standardized the 3D city models and improved not only reusability but also productivity and quality control efficiency. In addition, data standardization allows stakeholders to allocate their resources to non-standardized areas.
 
-Introduction content.
+In the PLATEAU project, various stakeholders have collaborated to promote the standardization of 3D city models by conducting data development and use case implementation in a streamlined manner, thereby demonstrating the benefits of standardization and increasing motivation among stakeholders. In addition, “Localization” of the standard bridges the gap that exists between the real and the ideal.
+
+“Localization” refers to the process of adapting a standard to reflect the specific circumstances of the cities and countries where the standard is applied. As a result, the standard aligns with the actual practices of data development and utilization, thereby enhancing its usability. In addition, considering the harmonization with existing processes and data promotes stakeholder acceptance of the standard. Furthermore, improvements in operational efficiency and effectiveness through standardization maximize outcomes. These factors contribute to the sustainability of the standard's implementation.
+
+This discussion paper discusses the sustainability of 3D city model development, utilization, and publication through the localization of CityGML, based on the practices in PLATEAU. <<toc2_00,Section 2>> introduces the relevant activities in Japan that provide background for the project. <<toc3_00,Section 3>> explains the standards and the methods for their localization. <<toc4_00,Section 4>> presents an overview of the PLATEAU ecosystem and the initiatives that support its implementation. Finally,<<toc5_00,Section 5>> discusses insights gained from <<toc3_00, Sections 3>> and <<toc4_00, Section 4>>, as well as future prospects.
 
 
-[.preface]
-== Other sections
+[[toc2_00]]
+== Background
+This section reflects on past policies regarding the development, utilization, and distribution of geospatial information in Japan as background for PLATEAU.
 
-// Insert any other sections as needed
-Other section content.
+[[toc2_01]]
+=== Geographic Information Development by Municipalities
+The main stakeholders in 2D geographic data development in Japan are municipalities. Municipalities generate various geographic information across different domains based on relevant legislation. For example, urban planning maps are developed based on the City Planning Act, road register maps are created in accordance with the Road Act, and housing status maps are produced under the Local Tax Law.
+
+Particularly in the field of urban planning, each municipality conducts urban planning basic surveys and develops urban planning base maps that cover the entire city. The urban planning basic survey is a statistical survey conducted by municipalities based on the City Planning Act. Since the enactment of the act in 1968, each municipality has conducted the survey approximately every five years. Additionally, the act stipulates that municipalities must create urban planning maps. The background map used for these urban planning maps is known as the urban planning base map, which municipalities develop or update about every five years as well.
+
+In this way, each municipality develops geographic information based on relevant legislation. The geographic information developed by these municipalities is considered to exhibit high completeness and reliability, with sustainable maintenance.
+
+[[toc2_02]]
+=== Digital Transformation of Geographic Information in Municipalities
+In the 1970s, forward-thinking municipalities introduced GIS (Geographic Information Systems) for specific applications such as urban planning and road management, and its adoption gradually expanded to other municipalities. However, the Hanshin-Awaji Earthquake in January 1995 accelerated the digitization of geospatial information, as relevant ministries and municipalities struggled to share geospatial data.
+
+In the early 2000s, the Ministry of Internal Affairs introduced the concepts of "Integrated GIS" and "Shared Geospatial Data," which enable cross-departmental utilization of geographic data within municipalities. The ministry issued guidelines to promote their implementation and established a subsidy program to support part of the implementation costs. This subsidy system continued for more than 15 years, resulting in an increase in the percentage of municipalities adopting Integrated GIS from 33.1% (579 cities) in 2010 to 65.9% (1,142 cities) in 2023. The guidelines and financial measures to promote them significantly contributed to the digitization of geospatial data in municipalities.
+
+[[toc2_03]]
+=== Geographic Information Standardization
+The Geospatial Authority of Japan (GSI), the national mapping agency of Japan, started working on the implementation of geospatial data standards from the late 1990s, in response to the international standardization activities by ISO/TC211 and OGC. Similarly, as mentioned previously regarding the promotion of digitalization triggered by the Hanshin-Awaji Earthquake, the importance of data standardization was also recognized.
+
+Therefore, in 2005, the GSI established the Japan Profile of Geographic Information Standards (JPGIS) to promote standardization of geospatial data in Japan. JPGIS is a profile that extracts practical elements from the relevant ISO 19100 series standards necessary for creating geospatial data, particularly those related to data product specifications. Since then, Japan has adopted JPGIS as the implementation standard for geospatial data.
+
+The GSI also adopted JPGIS to the "Guidelines for Public Survey," which apply to survey works conducted by national and local governments. In addition, the GSI established standard product specifications for outputs of public surveys, such as digital topographic maps, resulting in each national and local government creating their data product specifications in accordance with JPGIS for public survey works.
+
+On the other hand, various fields, including urban planning, developed data product specifications based on JPGIS to promote data standardization. However, each field created different application schema, and no GIS software could handle XML format data, which hindered the implementation of their data product specifications.
+
+[[toc2_04]]
+=== Building NSDI
+The “Basic Act on the Advancement of Utilizing Geospatial Information” (NSDI Act, which stands for National Spatial Data Infrastructure) was enacted in 2007. This act is a fundamental law that aims to promote the advanced utilization of geospatial information and establishes policies to form an NSDI as well as to promote the utilization and distribution of geospatial information.
+
+Starting in 2008, the GSI began developing and providing Fundamental Geospatial Data (FGD) as part of NSDI. The FGD includes 2D GIS data, Digital Elevation Models (DEMs), and Geoid Models. The GSI creates the GIS data by integrating data collected from municipalities, such as urban planning base maps. The FGD serves as a positional reference framework for digital maps across the entire country and is available for free. The GSI supplies the 2D GIS data and Digital Elevation Models (DEMs) in GML format, while the Geoid Model conforms to the standard format defined by the International Service for the Geoid (ISG).
+
+The GSI implements FGD based on a unique application schema created. Therefore, the encoding specification for FGD also utilize the GML Schema developed by the GSI. However, the GSI have developed and released a viewer and a converter to other GIS formats that are compatible with this encoding specification, and both commercial and free GIS software have added support for loading FGD. As a result, many users from industry, government, and academia extensively utilize FGD.
+
+[[toc2_05]]
+=== Open Data and Geospatial Information Center
+In July 2012, the Cabinet Office IT Comprehensive Strategy Office of Japan established the “Open Government Data Strategy” and has been promoting the disclosure and reuse of data held by municipalities and other entities. A basic policy titled “Easy Use of Public and Private Sector Data Held by the State and Local Public Entities” was defined in Article 11 of the Basic Act on the Formation of an Advanced Information and Telecommunications Network Society. This principle, aimed at making all data owned by the government public—including the data that serve as the foundation for policy planning—was articulated in 2017 under the concept of “Open Data by Design.”
+
+In response to the trend of open data, various ministries and municipalities have been promoting the provision of their geospatial data. However, the proliferation of multiple data portals can hinder the convenience of data users. Therefore, the "Geospatial Information Center" was established as a platform to consolidate diverse geospatial data provided by various entities, both public and private, allowing users to search, download, and utilize the data in a one-stop manner.
+
+The Geospatial Information Center was established based on the Basic Act on the Advancement of Utilizing Geospatial Information and outlined in the Second Basic Plan for the Advancement of Utilizing Geospatial Information (approved by the Cabinet in 2012). The plan aims to build an information center that facilitates the sharing and provision of geospatial information in Japan through the collaborative efforts of national and local governments, private businesses, and other stakeholders. The center began operations in 2016, with over 700 organizations from industry, government, and academia providing data through the Geospatial Information Center as of 2025.
+
+[[toc3_00]]
+== Standardization of 3D City Models Using CityGML
+[[toc3_01]]
+=== Adopting Standards
+PLATEAU defines a data product specification (hereafter referred to as DPS) that is applicable to all municipalities in Japan. This is because PLATEAU recognizes each municipality as a key stakeholder in the development and updating of 3D city models. In Japan, there are over 1,700 municipalities, and if each creates its own 3D city model independently, there could be 3D city models based on more than 1,700 different DPSs. If the DPSs differ for each city, the reusability of the data decreases. Therefore, the City Bureau of the MLIT has developed a common DPS for 3D city models, named the <<Ref_01, Standard Data Product Specification for 3D City Models>> (hereafter referred to as the “3D City Model Standard DPS”). Subsequent references to this document will use the term "3D City Model Standard DPS."
+
+PLATEAU adopted the OGC standard “CityGML 2.0” as the application schema and the encoding specification for the 3D City Model Standard DPS to ensure interoperability among 3D city models while also addressing the needs of various cities. Although PLATEAU could have developed a proprietary application schema, this approach would have been time-consuming and would have required the development of tools from scratch to handle 3D city models based on that schema. Consequently, PLATEAU decided to adopt CityGML 2.0, which incorporates the expertise of specialists from various countries and has already gained acceptance in advanced cities around the world.
+
+The international standard “CityGML” brings PLATEAU advantages described from the following four perspectives below:
+
+* **Neutrality**: The standard results of discussions among experts from various countries and is not dependent on any specific vendor.
+* **User-Friendly**: Various countries and cities have already implemented CityGML, and tools that support this standard are available. Additionally, since it is in a text-based format, even non-GIS experts can handle CityGML.
+* **Rigor and Scalability**: Not only can the standard define data structures rigorously, but users can also extend the model and schema.
+* **Adaptability**: Compatibility with standards from other fields, such as BIM, has been taken into consideration.
+
+CityGML is a standard for the data model and exchange format for describing, managing, and exchanging 3D city models. This standard conceptualizes a city from a semantic perspective, focusing on what comprises a city. One of the key functions of CityGML is the Level of Detail (LOD) system, which allows a single feature to have geometries at varying levels of detail, as well as an extensibility mechanism known as Generics module and Application Domain Extensions (ADEs) that enables applications across various fields and purposes. By utilizing this LOD and extensibility mechanism, each city can standardize semantics while selectively choosing the information necessary for its specific use cases.
+
+In 2021, the CityGML 3.0 Conceptual Model was published, followed by the encoding specification in GML in 2023. However, PLATEAU began its project in 2020 and has been operating on CityGML 2.0 to date.
+
+[[toc3_02]]
+=== Urban Planning ADE
+CityGML provides definitions for basic features and their properties, while each domain can extend the model by incorporating detailed information tailored to specific purposes through ADE mechanism. In PLATEAU, the <<Ref_19, Urban Planning ADE>> serves to extend CityGML for describing the data necessary for various use cases.
+
+Urban Planning ADE is an ADE developed by the Cabinet Office Secretariat for Promotion of Regional Revitalization. The ADE aims to structure the information necessary to serve an information platform for visualizing urban plans, measures for urban revitalization, and their results (i-Urban Revitalization). This ADE allows users to describe the results of the Urban Planning Survey, which is conducted periodically by the municipalities mentioned in section <<toc2_01,2.1>>, as standardized features and properties. As a result, the Urban Planning Survey outcomes for each city, once used independently, can now be visualized within 3D city models and easily integrated or compared with those of other cities.
+
+PLATEAU has adopted this Urban Planning ADE as well as CityGML from the beginning of the project and gives feedback on the results of use case development to the Urban Planning ADE every year. This feedback loop works as follows: Each city develops 3D CityGML using CityGML and Urban Planning ADE to realize its use cases. If they need any features and properties not defined in either CityGML or the ADE, they use the Generics module. Then, PLATEAU generalizes and structures those missing features and properties and the Cabinet Office reflects the generalized and structured features and properties into the Urban Planning ADE. Finally, PLATEAU updates the 3D City Model Standard DPS to refer to the updated Urban Planning ADE to use the ADE in the next year’s 3D city model and use case development. This feedback loop (<<figure1>>) repeats every year to reflect the user needs of various cities, enhancing the comprehensiveness and practicality of the Urban Planning ADE.
+[[figure1]]
+.Feedback Loop for Enhancing Urban Planning ADE
+image::FIG1.png[Feedback Loop for Enhancing Urban Planning ADE]
+
+In addition, Urban Planning ADE was submitted as a discussion paper with consideration for the harmonization with CityGML and its contribution to the standards community.
+
+[[toc3_03]]
+=== Standard Data Product Specification for 3D City Models
+PLATEAU has developed the <<Ref_01, 3D City Model Standard DPS>> aiming to apply to 3D city model development for all municipalities in Japan. This DPS complies with the ISO 19100 series, adopting CityGML and <<Ref_19, Urban Planning ADE>> as its application schemas and covering all items necessary for data development, such as the coordinate reference systems, quality requirements, and data quality evaluation methods.
+
+Particularly, since data creators for each city may differ, ensuring data homogeneity across the entire Japan is difficult. Therefore, PLATEAU not only defines the DPS as strictly as possible but also supports users in easily understanding the quality of 3D city models and using them.
+
+[[toc3_031]]
+==== Standard Data Product Specification Overview
+In the first version of the <<Ref_01, 3D City Model Standard DPS>>,which was formulated in 2021, the fundamental use cases for 3D city models encompassed “Provision of a foundation for storing various geographic spatial data related to cities (including open data)”, "visualization of urban planning in 3D space" and "3D visualization of disaster risk." These use cases included essential features that define a city, such as Buildings, Roads, Land Use, Urban Planning, Disaster Risk, and Relief Features. Since this first version, the features incorporated into the DPS have been expanded in the third version, published in 2023, to better align with a diverse range of use cases proposed by municipalities, as detailed in Table 1.
+
+[[table1]]
+[cols="1,1,1,1,1,1,1"]
+.Features Covered by the 3D City Model Standard DPS (Numbers Indicate Versions)
+|===
+2+| Feature | LOD0 | LOD1 | LOD2 | LOD3 | LOD4
+2+| Building | V1 | V1 | V1 | V2 | V3
+2+| LandUse |  | V1 |  |  |
+|Transportation| Road | V3 | V1 | V2 | V2|
+|Transportation| Track | V3 | V3 | V3 | V3|
+|Transportation| Square| V3 | V3 | V3 | V3|
+|Transportation| Railway | V3 | V3 | V3 | V3 |
+|Transportation| Waterway^2^ | V3 | V3 | V3 | |
+2+|Urban Plan^1^| | V1, V2 | | |
+2+|Disaster Risk^1^| | V1, V2 | | |
+2+|CityFurniture| V3 | V2 | V2 | V2 |
+2+|Vegetation| V3 | V2 | V2 | V2 |
+2+|Water Body| V3 | V3 | V3 | V3 |
+2+|Relief Feature| V3 | V1 | V3 | V3 |
+2+|Bridge| V3 | V3 | V3 | V3 | V3
+2+|Tunnel| V3 | V3 | V3  | V3 | V3
+2+|Other Construction^2^| V3 | V3 | V3 | V3 |
+2+|Underground Building^1^| V3 | V3 | V3 | V3| V3
+2+|Utility Network^1^| V3 | V3 | V3 | V3 | V3
+2+|Zone^1^| | V3 | | |
+2+|Generic City Object | V3 | V1| V1 | V3 | V3
+7+|
+1: Features delined in Urban Planning ADE
+
+2: Features defined in Urban Planning ADE while ensuring consistency with CityGML 3.0.
+
+|===
+Defining the3D City Model Standard DPS not only accelerates the rapid development of 3D city models and associated use case systems across various Japanese cities, but also streamlines the development of common software solutions, such as quality control and data conversion.
+
+Between 2020 and 2024, a total of over 250 cities created 3D city models based on the DPS and All 3D city models developed in PLATEAU are available as open data through the <<Ref_03,PLATEAU Data Portal>> at the <<toc2_05, Geospatial Information Center>>.
+
+By establishing the 3D City Model Standard DPS, the development of common software streamlined, allowing for a focused allocation of resources to non-standardized areas. These software solutions are available from the <<Ref_04,Open-Source Portal (GitHub)>> as open source and can be deployed in cities planning to develop 3D city models in the future. Historically, systems have been developed individually for each city and application; however, by utilizing common software, efficient system development can be achieved.
+
+[[toc3_032]]
+==== LOD Refinement
+CityGML 2.0 defines five levels in LOD: The coarsest level LOD0 is a two and a half dimensional Digital Terrain Model over which an aerial image or a map may be draped. LOD1 is the well-known blocks models with flat roof structures. In contrast, LOD2 has differentiated roof structures, and thematically differentiated boundary surfaces; furthermore, LOD2 may have outer installations. LOD3 denotes architectural models with detailed wall and roof structures potentially including openings. LOD4 completes a LOD3 model by adding interior structures.
+
+<<figure2>> presents building models in LOD2 created in two different cities in 2020, the first year of the project. The building depicted in Figure 2 for City A features roof installations and accurately captures the intricate geometries of the wall surfaces. In contrast, the building in City B omits roof installations and presents a simplified representation of the wall surfaces. Both building models meet the definition of LOD2 and are valid models at this level. However, the simplified model from City B cannot adequately support applications requiring detailed models, such as that of City A. Conversely, supplying a detailed model like that of City A to applications designed for simpler representations, like that of City B, may result in excessive data volume and subsequent operational challenges. Both detailed and simplified LOD2 building models possess distinct advantages and disadvantages, making the assertion of the superiority of one over the other difficult. The key factor is to establish a consensus on the definition of LOD2 between data providers and data users. This mutual agreement is essential for ensuring effective communication and utilization of the data in various applications.
+
+[[figure2]]
+.Examples of variations in shape reproducibility within the same LOD
+image::FIG2.png[Examples of variations in shape reproducibility within the same LOD]
+
+Consequently, to ensure mutual understanding among relevant stakeholders, PLATEAU has made a clear definition of each feature for each LOD. Furthermore, the subdivision of the LODs is introduced in the 3D City Model Standard DPS based on the research of <<Biljecki,Biljecki et al>>.　LODs are subdivided based on data owned by municipalities, since are designated as the responsible entities for maintenance to ensure sustainability (<<figure3>>). Specifically, municipalities can create LOD0, LOD1 and LOD2 using their aerial photographs or aerial laser point cloud data, thereby encompassing the entire city. LOD3 can be derived from data specifically acquired for individual use cases, primarily comprising images and point cloud data obtained through Mobile Mapping Systems. Furthermore, highly detailed LOD3 and LOD4 representations assume the use of Building Information Modeling (BIM) data.
+
+[[figure3]]
+.LOD subdivisions for LOD2 and LOD3
+image::FIG3.png[LOD subdivisions for LOD2 and LOD3]
+
+<<figure4>> represents examples of each LOD subdivisions. In the LOD2 subdivisions, as the LOD increases, the roof shapes become more detailed, and the classifications of installations become more specific. In the LOD3 subdivisions, the increasing LOD captures smaller openings, while detailing from the side includes recesses and overhangs. In contrast, LOD2 does not represent recesses and overhangs.
+
+The definitions of each LOD subdivision serve as a guideline for data creators when producing data. This allows them to create data that is consistent and tailored to requirements, avoiding both overly detailed and overly simplified datasets. Additionally, for data users, these definitions serve as a criterion to assess whether the quality meets their requirements, leading to an enhancement in the reusability of the 3D city models.
+
+
+[[figure4]]
+.Examples of LOD subdivisions
+image::FIG4.png[Examples of LOD subdivisions]
+
+PLATEAU has set the default subdivisions of LODs as “LOD X.0” and each municipality can select the appropriate subdivision for their use cases. The quality attributes of each feature defined in the Urban Planning ADE describe the selected LOD subdivisions, allowing users to understand the applied subdivision. In this way, PLATEAU defines the comprehensive DPS for both data creators and users by localizing LODs in terms of homogeneity and feasibility.
+
+[[toc3_033]]
+==== Mechanism for Profiling
+
+Features and properties required for 3D city models vary depending on the purpose, and they may also differ based on the size and environment of cities, even if the purpose is the same. However, if each city defines its DPS independently, the reusability of its 3D city models becomes limited, even though they are optimized for specific purpose.
+
+Therefore, PLATEAU defines the <<Ref_01,3D City Model Standard DPS>>, which comprehensively covers various features and properties, and rules to create a profile based on the specific needs of each municipality’s use case. Each municipality selects features, properties and LODs that are necessary for its use cases. In addition, if there are any features or properties not defined in the 3D City Model Standard DPS, municipalities can add them using the Generics module. This profile becomes an extended DPS for each city.
+
+In other words, CityGML models the concept of a city from a semantic perspective, and by adopting the Urban Planning ADE, which is an extension of CityGML, PLATEAU creates a comprehensive common data product specification (3D City Model Standard DPS) that serves as the implementation specification. Through a framework that allows for the creation of city-specific profiles using this standard DPS, PLATEAU can meet the unique needs of each city while ensuring the reusability of the data (<<figure5>>).
+
+[[figure5]]
+.Mechanism of Profiling
+image::FIG5.png[Mechanism of Profiling]
+
+By standardizing the product specifications of 3D city models in each municipality, the development of tools for creating or utilizing 3D city models can also be made more efficient. In fact, various tools such as PLATEAU Flow for quality management of 3D city models, PLATEAU VIEW for visualization, PLATEAU-GIS-Converter for converting CityGML to other GIS data formats, and PLATEAU SDK for Unity/Unreal for application development using 3D city models are compatible with CityGML and Urban Planning ADE, making them available for use in all municipalities.
+
+Additionally, to improve the reusability of 3D city models created by municipalities, PLATEAU recommends that they include a “Basic Set”, which is composed of common features such as buildings and roads and LODs, into their 3D city models even if the set is not required for their use cases (<<table2>>).
+
+[[table2]]
+[cols="1,1"]
+.Features and LODs of Basic Set
+|===
+|Feature|LOD
+|Building|LOD0, LOD1, LOD2
+|Road|LOD1
+|Land Use|LOD1
+|Disaster Risk|LOD1
+|Urban Plan|LOD1
+|Relief Feature|LOD1
+|===
+
+[[toc3_04]]
+=== "StandardsOps" as a Methodology
+PLATEAU has adopted CityGML as a data standard and extended the standard with the <<Ref_19,Urban Planning ADE>> to define information that is necessary for the use cases in developing a DPS for 3D city models. The procedures for developing the DPS are based on the methodology “StandardsOps”(<<Ishimaru>>), which promotes social implementation efficiently by utilizing open standards and connecting standards with operations.
+
+“StandardsOps” differs from the traditional waterfall model in that it consists of: (1) acceleration through support from open communities, (2) adoption of open standards that are freely available to everyone, (3) localization of semantics as needed to develop DPSs (4) rapid development into operations by concurrently developing the system alongside data creation, creating a feedback cycle to enhance open standards (<<figure6>>). This cycle has a “multi-cycle structure,” wherein individual cycles of standardization activities and operations are interrelated and continuously provide feedback, centered around open standards. Iterating this cycle in an abbreviated period can accelerate social implementation while continuously updating the standards, allowing them to evolve as a Living Standard to adapt to changes in operations, applicable technologies, and social conditions. Furthermore, collaboration with “open communities” that develop open standards and open-source software (OSS) is key to StandardsOps. The open communities support each element that constitutes the cycle, while the cycle feeds back the operational outcomes to the open communities. The bidirectional influence between the open communities and the operational cycle serves as a driving force for the continuous growth of standards and operations.
+[[figure6]]
+.Overview of StandardOps
+image::FIG6.png[Overview of StandardOps]
+[[toc4_00]]
+== Building an Ecosystem for Developing, Utilizing, and Open-Sourcing 3D City Models
+[[toc4_01]]
+=== Step Toward the Goal
+As the goal of the project, PLATEAU aims for "data coverage to encompass all of Japan and for 3D city models to become widely adopted as digital infrastructure." To achieve this, three stages (<<figure7>>) have been established. Setting these stages provides a framework to clarify objectives at each stage and to implement indicators for measuring progress, as well as effective strategies. Below are the three stages set by PLATEAU.
+
+* Phase 1: “Prototype Development: This phase involves collaborating with various players from industry, government, and academia who are interested in advanced technologies to verify the potential of 3D city models. The phase includes proactive data development by leading municipalities and the development of prototype services by innovative companies and local communities using that data.
+* Phase 2: "Implementation of Attractive Services": This phase focuses on implementing solutions that bring new value to society and address regional challenges through urban digital twins. As data coverage and awareness expand, the pool of players participating in service development also broadens. Additionally, monetizable services will emerge.
+* Phase 3: "Spread as Digital Infrastructure": This phase marks the completion of an "ecosystem" where the development, utilization, and open data sharing of 3D city models evolve autonomously. As attractive services utilizing 3D city models are continuously offered, the advantages of data-holding cities become evident, leading to further expansion of data coverage. Consequently, the participants and users will also grow to become a majority group.
+
+
+
+[[figure7]]
+.Steps Toward the Goal
+image::FIG7.png[Steps Toward the Goal]
+[[toc4_02]]
+=== PLATEAU Ecosystem
+The 3D city model must reflect changes in the real world, requiring continuous updates to the model. To achieve this, it is important to clearly define the roles of each participant that constitutes the ecosystem for the development, utilization, and open data sharing of 3D city models, ensuring that all participants fulfill their respective roles. From this perspective, PLATEAU aims to establish an ecosystem where industry, government, and academia collaborate to advance the development, utilization, and open data sharing of 3D city models (<<figure8>>).
+
+[[figure8]]
+.PLATEAU Ecosystem
+image::FIG8.png[PLATEAU Ecosystem]
+
+The participants that constitute the ecosystem are the "National Government," "Local Governments," "Innovation Companies," and "Local Communities."
+
+* The "National Government" refers to relevant governmental agencies, including the MLIT's City Bureau. The National Government implements fundamental policies and initiatives related to research and development investment, improvement of the data utilization environment, community building, and ecosystem building. The National Government also accumulates knowledge related to foundational technology development and advanced technology development with strong research elements and shares this knowledge with relevant stakeholders in non-competitive areas.
+* "Local Governments" refer to prefectures and municipalities. This includes a wide range of departments involved in digital policies, not limited to urban planning departments. Local Governments utilize the knowledge developed by the National Government to conduct the development, utilization, and open data sharing of 3D city models, promoting the expansion of data coverage and the social implementation of use cases related to administrative services.
+* "Innovation Companies" refer to businesses that are eager to develop services utilizing innovative technologies, including small and medium-sized enterprises and startups that exist within each local government. Innovation Companies are responsible for the social implementation of new services that utilize 3D city models.
+* "Local Communities" refer to technology holders rooted in the region, such as universities, civic tech organizations, and engineering communities. Local Communities focus on developing innovations and seeds utilizing 3D city models and enhancing the digital capabilities of local governments and citizens.
+
+=== The Role of the National Government in the PLATEAU Ecosystem
+PLATEAU is a project led by the MLIT, the national government agency; however, relying solely on the national government for initiatives would lack sustainability. Therefore, the initiative is implementing fundamental policies and improvements to create a system and environment that enable each participant, including "Local Governments," to fulfill their respective roles and realize the ecosystem. The main initiatives are outlined below.
+
+==== Expansion Data Coverage
+As part of the national government's role, efforts are being made to improve the usability of 3D city models, reduce maintenance costs, and enhance data interoperability and distribution. This includes the development of standard data models and data preparation methods, aiming to advance the sophistication and efficiency of data maintenance and updates for 3D city models.
+
+* Standardization of 3D City Models: In addition to the development of the aforementioned 3D City Model Standard DPS, <<Ref_02,"Standard Operating Procedure for 3D City Models">> has been created for surveying companies that produce data based on this specification, aiming to standardize and homogenize the data.
+
+* Development of 3D City Model Creation Technologies: To enhance the efficiency of data creation, a quality management system (<<Ref_08,PLATEAU Flow>>) has been developed along with an <<Ref_05,automated tool for generating building models (LOD2) using AI>> and a <<Ref_10,converter for integrating BIM models into 3D city models>>.
+Through these fundamental measures and initiatives to improve the environment implemented by the national government, 3D city models have been established in about 250 cities within the five years since the project began in 2020. Although there are over 1,700 cities across Japan, resulting in a low coverage rate in terms of area, 3D city models have been developed in major cities such as Tokyo, Osaka, and Sapporo, leading to a population coverage rate that exceeds half of the total population (Figure 9).
+
+
+[[figure9]]
+.Data Coverage as of 2025
+image::FIG9.png[Data Coverage as of 2025]
+
+In addition, PLATEAU has adopted the CC BY 4.0 license for sharing all outcomes developed under the project, including technical documents such as the <<Ref_01,3D City Model Standard DPS>>, 3D city models created based on this specification for various cities and various tools, allowing anyone to freely download and use them. By making the results of PLATEAU open access, the initiative not only supports the development and utilization of 3D city models by local governments but also encourages their use in business. The following are examples of tools developed and released with the aim of promoting data creation and utilization:
+
+* <<Ref_07,PLATEAU-Builder>>: Software designed for the straightforward and efficient editing, quality checking, and output of 3D city models in CityGML format, adhering to the 3D City Model Standard DPS. The software was developed to enable not only surveying companies with specialized technical skills but also individuals looking to use and create 3D city models, as well as vendors from various fields who lack expertise in 3D city modeling, to easily generate 3D city models for research and validation purposes.
+* <<Ref_14,PLATEAU-VIEW>>: A browser-based GIS that visualizes 3D city models developed in accordance with the 3D City Model Standard DPS. The PLATEAU-VIEW also allows for the overlay of various geospatial data.
+* <<Ref_12,PLATEAU-SDK-for-Unity>>: A toolkit for utilizing 3D city models in Unity that allows for easy conversion and export of 3D city models to FBX, OBJ, or glTF formats, development of games set in the real world, and conducting urban simulations that leverage PLATEAU's rich data. Similarly, a tool for utilizing 3D city models in <<Ref_13,Unreal Engine>> is also provided.
+* <<Ref_11,PLATEAU-QGIS-Plugin>>: A plugin for importing 3D city models into QGIS.
+* <<Ref_06,PLATEAU2Minecraft>>: A tool for converting 3D city models into a data format that can be imported into Minecraft.
+
+[[toc4_03]]
+==== Use Case Development
+The national government is collaborating with private companies, startups, universities, research institutions, and local governments to address social challenges and create new value using 3D city models. They are conducting proof of concept (PoC) for development of solutions in various fields (<<figure10>>). By publishing not <<Ref_15,only overviews of all use cases>> but also the results as <<Ref_16,technical reports>> and <<Ref_04,open-source software (OSS)>>, they are promoting the horizontal deployment of these solutions in other cities.
+
+[[figure10]]
+.Use Cases in Various Fields
+image::FIG10.webp[Use Cases in Various Fields]
+
+Open access to 3D city models and various tools is also promoting their use in private business. For example, they are used for landscape simulations in the real estate development sector, for creating 3D printed models used in wind tunnel experiments, and in the entertainment industry for air races utilizing XR technology, as well as for computer-generated imagery in movies and music videos.
+
+Additionally, as an initiative to support the development of use cases, MLIT launched a subsidy program for municipalities in 2022. This program provides financial assistance from the national government for the development of use cases that utilize 3D city models, assuming the models are made available as open data. Within the three years leading up to 2024, 76 municipalities have already utilized this subsidy program for the development of use cases and the establishment of 3D city models, increasing the proportion of 3D city model development by municipalities year by year (<<figure11>>). Furthermore, starting in 2025, MLIT also initiated a support program for private enterprises.
+
+[[figure11]]
+.Share of Entities Involved in 3D City Model Development
+image::FIG11.png[Share of Entities Involved in 3D City Model Development]
+[[toc4_04]]
+==== Community Building
+The national government is actively supporting community building to promote open innovation utilizing 3D city models provided as open data.
+
+* <<Ref_17,PLATEAU Consortium>>: The PLATEAU Consortium was established as a platform where diverse stakeholders from industry, academia, and government can share challenges and discuss issues openly, focusing on best practices related to data development, use case creation, and open data initiatives to promote the construction of the PLATEAU ecosystem. This consortium is operated by the Association for Promotion of Infrastructure Geospatial Information Distribution (AIGID), which aims to improve the distribution environment for collecting, disseminating, and utilizing information related to social infrastructure through collaboration among industry, government, and academia. AIGID also manages the Geospatial Information Center, which publishes 3D city models as open data. The PLATEAU Consortium provides materials (such as case studies) to support the internal project formation and approval processes of local governments, conducts technical training in collaboration with the surveying industry to expand the pool of companies available for contracting, and facilitates matching (B&G) between municipalities with needs for solving local issues using 3D city models and companies offering solutions using 3D city models. Additionally, they support matching (B&B) for the formation of new services through collaboration among private companies.
+* <<Ref_18,PLATEAU NEXT / PLATEAU AWARD>>: PLATEAU NEXT is a collective of various events (such as hackathons, lightning talks, and pitch events shown in <<figure12>>) aimed at stimulating the use of various open data related to urban development, including 3D city models. The PLATEAU NEXT aims to engage a broad audience and gather innovative ideas on how to utilize 3D city models. The PLATEAU AWARD is a development competition held as a culmination of these events, targeting services, applications, and artworks that utilize 3D city models. Each year, new ideas that emerge from this initiative become viable business ventures or lead to collaborative services implemented in partnership with companies involved in PLATEAU, creating new value from 3D city models.
+
+[[figure12]]
+.Activities Fostering Community Building
+image::FIG12.webp[Activities Fostering Community Building]
+
+In addition, PLATEAU supports open innovation initiatives by providing development tools such as the <<Ref_12,PLATEAU SDK for Unity/Unreal>>, as well as <<Ref_20,tutorials>> and tips on the basic handling of 3D city models and creating applications, available in both text and video formats. These resources are accessible not only to participants of various events but also to anyone interested in 3D city models.
+[[toc4_05]]
+=== The Role of Standards in the PLATEAU Ecosystem
+PLATEAU adopts CityGML (and <<Ref_19,Urban Planning ADE>>) as the application schema and the encoding specification for the 3D City Models. This significantly contributes to ensuring the interoperability of 3D city models within the PLATEAU Ecosystem. The 3D city models are described and stored in CityGML format, but when utilized, they are converted into appropriate formats for the specific application area. For example, in WebGIS, users convert the data to 3D Tiles, which is an OGC standard. Similarly, in GIS, they transform the data into GeoPackage, which is also an OGC standard. The same process applies during the data creation phase. Data creators produce the data in the format relevant to their field and then convert it to CityGML format for integration into the 3D city model. For instance, when users create a building in IFC format using BIM, they convert it to CityGML and integrate into the 3D city model. In this way, CityGML serves as a bridge between various data formats for the utilization and creation of 3D city models (<<figure13>>).
+
+[[figure13]]
+.CityGML Bridging Various Data Formats for 3D City Models
+image::FIG13.png[CityGML Bridging Various Data Formats for 3D City Models]
+
+PLATEAU provides useful tools that support data conversion for data utilization and creation.
+
+* <<Ref_09,PLATEAU-GIS-Convertor>>: A proof-of-concept GUI and CLI tool for converting PLATEAU's 3D city models (CityGML) of Japan into various geospatial formats, including 3D Tiles, GeoPackage, KML, glTF, MVT, and GeoPackage.
+* <<Ref_10,PLATEAU-IFC-to-CityGML2.0-LOD4>> : An FME workbench template for converting IFC (IFC 2x3 CV 2.0) to a CityGML LOD4 building model.
+
+Moreover, CityGML is not just a format intended for intermediary purposes. The explicitly defined object structure and semantics of CityGML and the Urban Planning ADE can be "understood" and utilized by AI agents using Large Language Models (LLMs). Users can query the urban digital twin in natural language, and their inquiries are then transformed into queries for the CityGML + ADE datasets or databases. For example, when a user asks in natural language, "What is the average height of buildings in this area?" or "How many buildings in this area are at risk of flooding due to rivers?" the LLMs can extract specific information in response to these questions using the data from the 3D city model.
+The 3D city models created in accordance with the 3D City Model Standard DPS are quality-assured, making them highly suitable for training AI models to generate semantically rich 3D city models from source data such as sensors and point clouds in the future. Additionally, the data serves as "ground truth" for assessing the quality of AI-generated 3D city models.
+
+[[toc5_00]]
+== Discussions
+In Japan's urban digital twin project "PLATEAU," the development, utilization, and open data of 3D city models are being promoted. The project adopts CityGML 2.0, an international standard, for its 3D city models and creates a comprehensive product specification by repeatedly reflecting the needs derived from use cases developed in various cities into the ADE (Application Domain Extension). At the same time, the project enables the creation of profiles tailored to the use cases of each city, providing a mechanism to address city-specific needs. Furthermore, PLATEAU aims to build an ecosystem that allows various stakeholders from the public and private sectors, as well as academia, to autonomously promote the development, utilization, and open data of 3D city models. Since its launch in 2020, PLATEAU has developed 3D city models for over 250 cities and created more than 100 use cases within five years. The concepts of "Standardization and Localization" and "Ecosystem Building” underpin the rapid development.
+
+* **Standardization and Localization**
+** The standardization of 3D city models not only enhances data reusability but also improves productivity and quality management efficiency, allowing for a focused allocation of resources to non-standardized areas. The ADE mechanism of CityGML enables the localization of standards. By rapidly repeating the cycle of examination and implementation through this "localization," social implementation can be accelerated while continuously updating the standards. This approach allows the standards to evolve as "living standards" in response to changes in applicable technologies and societal conditions.
+** The gap that exists between standards and actual practices places a burden on the operation and sustainability of those standards. To mitigate this gap, effectively applying the standards to maximize the use of existing processes and data, along with "localization" of the standards, proves to be effective.
+
+* **Ecosystem Building**
+** The sustainability of 3D city models is a crucial key in the implementation of UDTs. It is necessary to build an ecosystem that clarifies who the main stakeholders are and what roles each should play, and to operate this ecosystem effectively. This ecosystem must reflect the realities of each country and city.
+** In Japan, municipalities are continuously and comprehensively developing geospatial data based on legal regulations. However, in the context of societal changes such as declining birth rates and an aging population, the number of municipalities capable of newly developing 3D city models is limited. While temporary investments might be possible, sustaining them over the long term poses challenges in most cases. Therefore, PLATEAU is promoting the development of tools and support systems that enable continuous development and updating of 3D city models without burdening municipalities by positioning the geospatial data they develop as a resource. Additionally, efforts are underway to develop tools for utilizing 3D city models. By implementing foundational policies and environmental improvements, the national government is supporting and accelerating the autonomous development, utilization, and open data of 3D city models by various stakeholders in the ecosystem.
+** The foundational and environmental policies supporting this ecosystem include not only the initiatives led by the MLIT overseeing PLATEAU, but also the efforts of related ministries, such as the establishment of standards through JPGIS and the creation of the Geospatial Information Center to promote open data. The incorporation of insights gained from these past initiatives into the project is also a core reason behind its significant advancements.
+
+In the future, the expansion of PLATEAU's initiatives domestically is expected, along with the sharing of insights gained from these activities with various countries and cities, contributing to the sustainable implementation of UDTs. To achieve this, the following efforts are necessary:
+
+* **Promotion of ADE**
+** At PLATEAU, active development of Urban Planning ADE focuses on localizing standards to address the challenges and needs of diverse municipalities across Japan using 3D city models. Due to the diverse structures of ADEs, there are no universally applicable software solutions, and PLATEAU has engaged in individual development efforts. PLATEAU shares the results of these efforts as open source and documentation.
+** These assets are utilized when expanding to other cities in Japan that face similar challenges and needs. However, common use cases exist in various countries and cities around the world. The assets developed by PLATEAU can also be leveraged by countries and cities working on similar use case developments. They can achieve further advancements and efficiencies by using these assets, and if the results are fed back into the system, the use cases in Japanese cities can also be enhanced and streamlined.
+** However, at present, there is no system for broadly sharing ADEs and related technologies. There are portal sites such as link:++https://github.com/OloOcki/awesome-citygml++[“Awesome CityGML”] and link:++https://www.citygmlwiki.org/index.php?title=Citygml_Wiki++[“CityGML Wiki”], but their operation is uncertain. A platform that aggregates knowledge and resources related to ADE development from various countries and cities enables the reuse of these resources in next-generation development, and facilitate the spread of the standard.
+** This platform will serve as a collection of ideas to enhance future versions of CityGML. For example, PLATEAU has extended the Urban Planning ADE to allow for the subdivision of LOD and to explicitly present this as a quality attribute for each city object to data users. Various stakeholders provide data to create and update 3D city models. In such cases, understanding the quality of each city object becomes especially important, and this may be the starting point for considering metadata in CityGML.
+** It is recommended for OGC and the related Working Groups to take the lead on these matters.
+
+* **Support for Transitioning to CityGML 3.0**
+** With the introduction of new modules, such as integration with point clouds and dynamic data, as well as indoor LOD representations and a significantly extended transportation module that allows for the representation of detailed street space models with lane-level accuracy, CityGML 3.0 has expanded the possibilities for utilizing 3D city models across a broader range of use cases. Additionally, CityGML 3.0 aims for compatibility with other standards, including IFC. Taking these advantages into consideration, PLATEAU is exploring a transition to CityGML 3.0.
+** However, PLATEAU has already accumulated various assets, including 3D city models compliant with CityGML 2.0 and tools that utilize them. The motivation to transition to CityGML 3.0 is low for use cases that municipalities and private companies can realize with CityGML 2.0. Furthermore, PLATEAU will also need to revise the Urban Planning ADE to ensure compatibility with CityGML 3.0, which may pose technical challenges in significantly altering the product specifications of 3D city models and potentially compromise the operation of the ecosystem.
+** Therefore, PLATEAU is considering measures to reduce the burden on data creators and users. For example, the development of an upgrade converter from CityGML 2.0 to CityGML 3.0 and a downgrade converter from CityGML 3.0 to CityGML 2.0 are potential strategies.
+
+In the future, various countries and cities will introduce CityGML 3.0, transitioning from CityGML 2.0. These initiatives may occur simultaneously around the world, and the existence of a platform to share the knowledge accumulated from these efforts would enable collaborative solutions to each other's challenges. As a result, feedback from these outcomes could further enhance the quality of the standards.
+
+An open community that openly shares insights on effectively applying the open standard CityGML and collaboratively addressing challenges in its adoption would significantly accelerate the dissemination of CityGML and foster positive developments in its implementation. This applies not only to CityGML but also to other standards. The OGC systematically develops various standards to enable seamless information exchange across different systems. However, users of the standards may encounter challenges in applying them because they do not know which standards to combine or how to differentiate between them. Therefore, there is a need for the open community to continually promote the use of standards.
+
+[[toc6_00]]
+== Conclusions
+In Japan’s urban digital twin realization project "PLATEAU," stakeholders are actively promoting the development, utilization, and open data sharing of 3D city models. The underpinning principles of PLATEAU include "openness," "flat collaboration," and "sustainability." By centering on the international standard CityGML and localizing the international standard according to specific use cases, and by making the resulting technologies and knowledge openly available, PLATEAU aims to broaden the base of participants. This approach enables various stakeholders from industry, government, and academia to utilize 3D city models and create new value by combining their respective strengths and weaknesses. Each entity enhances sustainability by autonomously promoting the development, utilization, and open data sharing of 3D city models.
+
+Furthermore, this initiative extends beyond Japan; through CityGML, the project enables collaboration with various countries that adopt this standard. However, since PLATEAU primarily documents its resources in Japanese, overcoming the language barrier is essential for achieving effective collaboration with international partners. To facilitate the global utilization of PLATEAU's insights, translating the materials into multiple languages, including English and other widely used languages, is important.
+
+Moving forward, PLATEAU's mission will also include contributing to the realization of UDTs in each country and city. This will be achieved through the dissemination of open-source software (OSS) and know-how derived from the developed Urban Planning ADE and various use cases that implement the ADE, as well as insights related to the application of the StandardsOps methodology. Additionally, the existence of an open community as a platform for sharing the knowledge and experiences gained through these standards is important.
+
+[appendix]
+== PLATEAU Resources
+
+* [[Ref_00]]PLATEAU Website: link:++https://www.mlit.go.jp/plateau/++[]
+* [[Ref_01]]Standard Data Product Specification for 3D City Models: link:++https://www.mlit.go.jp/plateaudocument/++[]
+* [[Ref_02]]Standard Implementation Procedures for 3D City Model: link:++https://www.mlit.go.jp/plateaudocument02/++[]
+* [[Ref_03]]Open-Data Portal (Geospatial Information Center): link:++https://front.geospatial.jp/plateau_portal_site/++[]
+* [[Ref_04]]Open-Source Portal (GitHub): link:++https://github.com/Project-PLATEAU++[]
+** [[Ref_05]]PLATEAU-Auto-Create-bldg-lod2-tool: link:++https://github.com/Project-PLATEAU/Auto-Create-bldg-lod2-tool++[]
+** [[Ref_06]]PLATEAU2Minecraft: link:++https://github.com/Project-PLATEAU/plateau2minecraft++[]
+** [[Ref_07]]PLATEAU-Builder: link:++https://github.com/Project-PLATEAU/PLATEAU-Builder++[]
+** [[Ref_08]]PLATEAU-FLOW:https://github.com/Project-PLATEAU/PLATEAU-VIEW-4.0/tree/main/flow
+** [[Ref_09]]PLATEAU-GIS-Converter: link:++https://github.com/Project-PLATEAU/PLATEAU-GIS-Converter++[]
+** [[Ref_10]]PLATEAU-IFC-to-CityGML2.0-LOD4:https://github.com/Project-PLATEAU/PLATEAU-IFC-to-CityGML2.0-LOD4
+** [[Ref_11]]PLATEAU-QGIS-Plugin: link:++https://github.com/Project-PLATEAU/plateau-qgis-plugin++[]
+** [[Ref_12]]PLATEAU-SDK-for-Unity: link:++https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity++[]
+** [[Ref_13]]PLATEAU-SDK-for-Unreal: link:++https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unreal++[]
+** [[Ref_14]]PLATEAU-VIEW: link:++https://github.com/Project-PLATEAU/PLATEAU-VIEW-4.0++[]
+* [[Ref_15]]PLATEAU Use Cases: link:++https://www.mlit.go.jp/plateau/use-case/++[]
+* [[Ref_16]]PLATEAU Technical Reports: link:++https://www.mlit.go.jp/plateau/libraries/technical-reports/++[]
+* [[Ref_17]]PLATEAU Consortium: link:++https://www.mlit.go.jp/plateau/consortium/++[]
+* [[Ref_18]]PLATEAU Next: link:++https://www.mlit.go.jp/plateau-next/++[]
+* [[Ref_20]]PLATEAU Tutorials: link:++https://www.mlit.go.jp/plateau/learning/++[]
+* [[Ref_19]]i-UR (Urban Planning ADE): link:++https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur++[]
+
+[appendix]
+== Bibliography
 
 [bibliography]
-== References
+* [[[udt,OGC 24-025]]], Rönsdorf, C., Servant, F., Gruler, H.C., Giannias, N., Kim, K., Soleiman, Z., Sarafinof, D.: *Urban Digital Twins: Integrating Infrastructure, natural environment and people*. Open Geospatial Consortium, OGC 24-025. link:++http://www.opengis.net/doc/dp/UDT++[], 2024.
 
-// Typical reference entries (without auto-fetch)
-// Reference content will display as written
-* [[[openapi,Open API Initiative]]], Open API Initiative: *OpenAPI Specification 3.0.2*, 2018 link:++https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md++[]
+* [[[citygml, OGC 12-019]]], Gröger, G., Kolbe, T. H., Nagel, C., Häfele, K.-H.: OGC City Geography Markup Language (CityGML) Encoding Standard. Open Geospatial Consortium, OGC 12-019. link:++http://www.opengis.net/spec/citygml/2.0++[], 2012.
 
-* [[[gmlsf,GMLSF]]], van den Brink, L., Portele, C., Vretanos, P.: OGC 10-100r3, *Geography Markup Language (GML) Simple Features Profile*, 2012 link:++http://portal.opengeospatial.org/files/?artifact_id=42729++[]
+* [[[Akahoshi, doi.org/10.5194/isprs-annals-V-4-2020-179-2020]]], Akahoshi, K., Ishimaru, N., Kurokawa, C., Tanaka, Y., Oishi, T., Kutzner, T., and Kolbe, T.H.: i-Urban Revitalization: Conceptual modeling, implementation, and visualization towards sustainable urban planning using CityGML, ISPRS Ann. Photogramm. Remote Sens. Spatial Inf. Sci., V-4-2020, 179–186. link:++https://doi.org/10.5194/isprs-annals-V-4-2020-179-2020++[], 2020
 
-* [[[html5,HTML5]]], W3C: *HTML5*, W3C Recommendation, 2019 link:++http://www.w3.org/TR/html5/++[]
+* [[[Ishimaru, doi.org/10.5638/thagis.33.11]]], Ishimaru, N., Uchiyama, Y., Akahoshi, K., Kurokawa, C., Shibasaki, R.: StandardsOps: A proposed methodology for collaboration of Standardization and Operations toward Urban Digital Transformation - Practices of CityGML, i-Urban Revitalization (Urban Planning ADE), and Project PLATEAU -. Theory and Applications of GIS, 33(1), 1-13. link:++https://doi.org/10.5638/thagis.33.11++[], 2025. (In Japanese)
 
-* [[[schema,Schema.org]]], *Schema.org:* link:++http://schema.org/docs/schemas.html++[]
+* [[[Uchiyama, doi.org/10.5194/isprs-archives-XLVIII-4-W15-2025-171-2025]]], Uchiyama, Y., Mizobuchi, M., Yamamoto, J., Kurokawa, C., Sekimoto, Y.,2025, A Perspective on the Standardization Process of 3D City Models in Japan: History of Geospatial Information Policy and Government Commitment to Standardization, , Int. Arch. Photogramm. Remote Sens. Spatial Inf. Sci., XLVIII-4/W15-2025, 171–177, link:++https://doi.org/10.5194/isprs-archives-XLVIII-4-W15-2025-171-2025++[], 2025
 
-// Automatic reference fetching entries (auto-fetch)
-// To verify the reference lookup syntax for all the supported flavors,
-// visit: link:++https://www.metanorma.org/author/topics/building/reference-lookup/#reference-lookup-syntax++[]
-* [[[rfc2616,RFC 2616]]], Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., Berners-Lee, T.: IETF RFC 2616, *HTTP/1.1*, 1999 link:++http://tools.ietf.org/rfc/rfc2616.txt++[]
+* [[[Kurokawa, doi.org/10.5194/isprs-annals-X-4-W6-2025-129-2025]]], Kurokawa, C., Minegami, Y., Anzai, S., Sogawa., Y., and Sekimoto, Y.: Development of the Standard Data Product Specification for 3D City Models Using CityGML, ISPRS Ann. Photogramm. Remote Sens. Spatial Inf. Sci., X-4/W6-2025, 129–136, link:++https://doi.org/10.5194/isprs-annals-X-4-W6-2025-129-2025++[], 2025.
 
-* [[[rfc2818,RFC 2818]]], Rescorla, E.: IETF RFC 2818, *HTTP Over TLS*, 2000 link:++http://tools.ietf.org/rfc/rfc2818.txt++[]
-
-* [[[rfc3339,RFC 3339]]], Klyne, G., Newman, C.: IETF RFC 3339, *Date and Time on the Internet: Timestamps*, 2002 link:++http://tools.ietf.org/rfc/rfc3339.txt++[]
-
-* [[[rfc8288,RFC 8288]]], Nottingham, M.: IETF RFC 8288, *Web Linking*, 2017 link:++http://tools.ietf.org/rfc/rfc8288.txt++[]
-
-* [[[rfc7946,RFC 7946]]], Butler, H., Daly, M., Doyle, A., Gillies, S., Hagen, S., Schaub, T.: IETF RFC 7946, *The GeoJSON Format*, 2016 link:++https://tools.ietf.org/rfc/rfc7946.txt++[]
-[[clause-reference]]
-== Other clauses
-
-//Insert clause content here
-
-Clause content.
-
-[NOTE]
-====
-Add any other clauses as needed
-====
+* [[[Biljecki, doi.org/10.1016/j.compenvurbsys.2016.04.005]]], Biljecki, F., Ledoux, H., Stoter, J.: An improved LOD specification for 3D building models. Computers, Environment and Urban Systems, 59, 25-37, link:++https://doi.org/10.1016/j.compenvurbsys.2016.04.005++[], 2016.

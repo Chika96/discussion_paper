@@ -1,0 +1,18 @@
+
+[appendix]
+== Bibliography
+
+[bibliography]
+* [[[udt,OGC 24-025]]], Rönsdorf, C., Servant, F., Gruler, H.C., Giannias, N., Kim, K., Soleiman, Z., Sarafinof, D.: *Urban Digital Twins: Integrating Infrastructure, natural environment and people*. Open Geospatial Consortium, OGC 24-025. http://www.opengis.net/doc/dp/UDT, 2024.
+
+* [[[citygml, OGC 12-019]]], Gröger, G., Kolbe, T. H., Nagel, C., Häfele, K.-H.: OGC City Geography Markup Language (CityGML) Encoding Standard. Open Geospatial Consortium, OGC 12-019. http://www.opengis.net/spec/citygml/2.0, 2012.
+
+* [[[Akahoshi, doi.org/10.5194/isprs-annals-V-4-2020-179-2020]]], Akahoshi, K., Ishimaru, N., Kurokawa, C., Tanaka, Y., Oishi, T., Kutzner, T., and Kolbe, T.H.: i-Urban Revitalization: Conceptual modeling, implementation, and visualization towards sustainable urban planning using CityGML, ISPRS Ann. Photogramm. Remote Sens. Spatial Inf. Sci., V-4-2020, 179–186. https://doi.org/10.5194/isprs-annals-V-4-2020-179-2020, 2020
+
+* [[[Ishimaru, doi.org/10.5638/thagis.33.11]]], Ishimaru, N., Uchiyama, Y., Akahoshi, K., Kurokawa, C., Shibasaki, R.: StandardsOps: A proposed methodology for collaboration of Standardization and Operations toward Urban Digital Transformation - Practices of CityGML, i-Urban Revitalization (Urban Planning ADE), and Project PLATEAU -. Theory and Applications of GIS, 33(1), 1-13. https://doi.org/10.5638/thagis.33.11, 2025. (In Japanese)
+
+* [[[Uchiyama, doi.org/10.5194/isprs-archives-XLVIII-4-W15-2025-171-2025]]], Uchiyama, Y., Mizobuchi, M., Yamamoto, J., Kurokawa, C., Sekimoto, Y.,2025, A Perspective on the Standardization Process of 3D City Models in Japan: History of Geospatial Information Policy and Government Commitment to Standardization, , Int. Arch. Photogramm. Remote Sens. Spatial Inf. Sci., XLVIII-4/W15-2025, 171–177, https://doi.org/10.5194/isprs-archives-XLVIII-4-W15-2025-171-2025, 2025
+
+* [[[Kurokawa, doi.org/10.5194/isprs-annals-X-4-W6-2025-129-2025]]], Kurokawa, C., Minegami, Y., Anzai, S., Sogawa., Y., and Sekimoto, Y.: Development of the Standard Data Product Specification for 3D City Models Using CityGML, ISPRS Ann. Photogramm. Remote Sens. Spatial Inf. Sci., X-4/W6-2025, 129–136, https://doi.org/10.5194/isprs-annals-X-4-W6-2025-129-2025, 2025.
+
+* [[[Biljecki, doi.org/10.1016/j.compenvurbsys.2016.04.005]]], Biljecki, F., Ledoux, H., Stoter, J.: An improved LOD specification for 3D building models. Computers, Environment and Urban Systems, 59, 25-37, https://doi.org/10.1016/j.compenvurbsys.2016.04.005, 2016.

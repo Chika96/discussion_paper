@@ -1,0 +1,44 @@
+[[toc2_00]]
+== Background
+This section reflects on past policies regarding the development, utilization, and distribution of geospatial information in Japan as background for PLATEAU.
+
+[[toc2_01]]
+=== Geographic Information Development by Municipalities
+The main stakeholders in 2D geographic data development in Japan are municipalities. Municipalities generate various geographic information across different domains based on relevant legislation. For example, urban planning maps are developed based on the City Planning Act, road register maps are created in accordance with the Road Act, and housing status maps are produced under the Local Tax Law.
+
+Particularly in the field of urban planning, each municipality conducts urban planning basic surveys and develops urban planning base maps that cover the entire city. The urban planning basic survey is a statistical survey conducted by municipalities based on the City Planning Act. Since the enactment of the act in 1968, each municipality has conducted the survey approximately every five years. Additionally, the act stipulates that municipalities must create urban planning maps. The background map used for these urban planning maps is known as the urban planning base map, which municipalities develop or update about every five years as well.
+
+In this way, each municipality develops geographic information based on relevant legislation. The geographic information developed by these municipalities is considered to exhibit high completeness and reliability, with sustainable maintenance.
+
+[[toc2_02]]
+=== Digital Transformation of Geographic Information in Municipalities
+In the 1970s, forward-thinking municipalities introduced GIS (Geographic Information Systems) for specific applications such as urban planning and road management, and its adoption gradually expanded to other municipalities. However, the Hanshin-Awaji Earthquake in January 1995 accelerated the digitization of geospatial information, as relevant ministries and municipalities struggled to share geospatial data.
+
+In the early 2000s, the Ministry of Internal Affairs introduced the concepts of "Integrated GIS" and "Shared Geospatial Data," which enable cross-departmental utilization of geographic data within municipalities. The ministry issued guidelines to promote their implementation and established a subsidy program to support part of the implementation costs. This subsidy system continued for more than 15 years, resulting in an increase in the percentage of municipalities adopting Integrated GIS from 33.1% (579 cities) in 2010 to 65.9% (1,142 cities) in 2023. The guidelines and financial measures to promote them significantly contributed to the digitization of geospatial data in municipalities.
+
+[[toc2_03]]
+=== Geographic Information Standardization
+The Geospatial Authority of Japan (GSI), the national mapping agency of Japan, started working on the implementation of geospatial data standards from the late 1990s, in response to the international standardization activities by ISO/TC211 and OGC. Similarly, as mentioned previously regarding the promotion of digitalization triggered by the Hanshin-Awaji Earthquake, the importance of data standardization was also recognized.
+
+Therefore, in 2005, the GSI established the Japan Profile of Geographic Information Standards (JPGIS) to promote standardization of geospatial data in Japan. JPGIS is a profile that extracts practical elements from the relevant ISO 19100 series standards necessary for creating geospatial data, particularly those related to data product specifications. Since then, Japan has adopted JPGIS as the implementation standard for geospatial data.
+
+The GSI also adopted JPGIS to the "Guidelines for Public Survey," which apply to survey works conducted by national and local governments. In addition, the GSI established standard product specifications for outputs of public surveys, such as digital topographic maps, resulting in each national and local government creating their data product specifications in accordance with JPGIS for public survey works.
+
+On the other hand, various fields, including urban planning, developed data product specifications based on JPGIS to promote data standardization. However, each field created different application schema, and no GIS software could handle XML format data, which hindered the implementation of their data product specifications.
+
+[[toc2_04]]
+=== Building NSDI
+The “Basic Act on the Advancement of Utilizing Geospatial Information” (NSDI Act, which stands for National Spatial Data Infrastructure) was enacted in 2007. This act is a fundamental law that aims to promote the advanced utilization of geospatial information and establishes policies to form an NSDI as well as to promote the utilization and distribution of geospatial information.
+
+Starting in 2008, the GSI began developing and providing Fundamental Geospatial Data (FGD) as part of NSDI. The FGD includes 2D GIS data, Digital Elevation Models (DEMs), and Geoid Models. The GSI creates the GIS data by integrating data collected from municipalities, such as urban planning base maps. The FGD serves as a positional reference framework for digital maps across the entire country and is available for free. The GSI supplies the 2D GIS data and Digital Elevation Models (DEMs) in GML format, while the Geoid Model conforms to the standard format defined by the International Service for the Geoid (ISG).
+
+The GSI implements FGD based on a unique application schema created. Therefore, the encoding specification for FGD also utilize the GML Schema developed by the GSI. However, the GSI have developed and released a viewer and a converter to other GIS formats that are compatible with this encoding specification, and both commercial and free GIS software have added support for loading FGD. As a result, many users from industry, government, and academia extensively utilize FGD.
+
+[[toc2_05]]
+=== Open Data and Geospatial Information Center
+In July 2012, the Cabinet Office IT Comprehensive Strategy Office of Japan established the “Open Government Data Strategy” and has been promoting the disclosure and reuse of data held by municipalities and other entities. A basic policy titled “Easy Use of Public and Private Sector Data Held by the State and Local Public Entities” was defined in Article 11 of the Basic Act on the Formation of an Advanced Information and Telecommunications Network Society. This principle, aimed at making all data owned by the government public—including the data that serve as the foundation for policy planning—was articulated in 2017 under the concept of “Open Data by Design.”
+
+In response to the trend of open data, various ministries and municipalities have been promoting the provision of their geospatial data. However, the proliferation of multiple data portals can hinder the convenience of data users. Therefore, the "Geospatial Information Center" was established as a platform to consolidate diverse geospatial data provided by various entities, both public and private, allowing users to search, download, and utilize the data in a one-stop manner.
+
+The Geospatial Information Center was established based on the Basic Act on the Advancement of Utilizing Geospatial Information and outlined in the Second Basic Plan for the Advancement of Utilizing Geospatial Information (approved by the Cabinet in 2012). The plan aims to build an information center that facilitates the sharing and provision of geospatial information in Japan through the collaborative efforts of national and local governments, private businesses, and other stakeholders. The center began operations in 2016, with over 700 organizations from industry, government, and academia providing data through the Geospatial Information Center as of 2025.
+

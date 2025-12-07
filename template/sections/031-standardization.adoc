@@ -1,0 +1,9 @@
+
+[[toc3_04]]
+=== "StandardsOps" as a Methodology
+PLATEAU has adopted CityGML as a data standard and extended the standard with the <<Ref_19,Urban Planning ADE>> to define information that is necessary for the use cases in developing a DPS for 3D city models. The procedures for developing the DPS are based on the methodology “StandardsOps”(<<Ishimaru>>), which promotes social implementation efficiently by utilizing open standards and connecting standards with operations.
+
+“StandardsOps” differs from the traditional waterfall model in that it consists of: (1) acceleration through support from open communities, (2) adoption of open standards that are freely available to everyone, (3) localization of semantics as needed to develop DPSs (4) rapid development into operations by concurrently developing the system alongside data creation, creating a feedback cycle to enhance open standards (<<figure6>>). This cycle has a “multi-cycle structure,” wherein individual cycles of standardization activities and operations are interrelated and continuously provide feedback, centered around open standards. Iterating this cycle in an abbreviated period can accelerate social implementation while continuously updating the standards, allowing them to evolve as a Living Standard to adapt to changes in operations, applicable technologies, and social conditions. Furthermore, collaboration with “open communities” that develop open standards and open-source software (OSS) is key to StandardsOps. The open communities support each element that constitutes the cycle, while the cycle feeds back the operational outcomes to the open communities. The bidirectional influence between the open communities and the operational cycle serves as a driving force for the continuous growth of standards and operations.
+[[figure6]]
+.Overview of StandardOps
+image::FIG6.png[Overview of StandardOps]

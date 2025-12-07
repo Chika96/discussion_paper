@@ -1,0 +1,14 @@
+
+[[toc1_00]]
+== Introduction
+3D city models that replicate the physical structure of the cities serve as a crucial foundation for integrating various data related to those cities, in the implementation of Urban Digital Twins (UDTs). Standardizing 3D city models is necessary to improve interoperability, enable efficient development and operation, and ensure data quality. However, in domains and organizations where existing processes and customs are well established, there is strong resistance to change, making standardization difficult.
+
+“<<Ref_00,PLATEAU>>”, the urban digital twin realization project led by the City Bureau of Japan's Ministry of Land, Infrastructure, Transport, and Tourism (MLIT) and in collaboration with various stakeholders, has developed 3D city models for over 250 cities and more than 100 use cases within five years since its launch in 2020. The open standard “CityGML” supports this rapid development in PLATEAU. By adopting CityGML, PLATEAU has standardized the 3D city models and improved not only reusability but also productivity and quality control efficiency. In addition, data standardization allows stakeholders to allocate their resources to non-standardized areas.
+
+In the PLATEAU project, various stakeholders have collaborated to promote the standardization of 3D city models by conducting data development and use case implementation in a streamlined manner, thereby demonstrating the benefits of standardization and increasing motivation among stakeholders. In addition, “Localization” of the standard bridges the gap that exists between the real and the ideal.
+
+“Localization” refers to the process of adapting a standard to reflect the specific circumstances of the cities and countries where the standard is applied. As a result, the standard aligns with the actual practices of data development and utilization, thereby enhancing its usability. In addition, considering the harmonization with existing processes and data promotes stakeholder acceptance of the standard. Furthermore, improvements in operational efficiency and effectiveness through standardization maximize outcomes. These factors contribute to the sustainability of the standard's implementation.
+
+This discussion paper discusses the sustainability of 3D city model development, utilization, and publication through the localization of CityGML, based on the practices in PLATEAU. <<toc2_00,Section 2>> introduces the relevant activities in Japan that provide background for the project. <<toc3_00,Section 3>> explains the standards and the methods for their localization. <<toc4_00,Section 4>> presents an overview of the PLATEAU ecosystem and the initiatives that support its implementation. Finally,<<toc5_00,Section 5>> discusses insights gained from <<toc3_00, Sections 3>> and <<toc4_00, Section 4>>, as well as future prospects.
+
+
